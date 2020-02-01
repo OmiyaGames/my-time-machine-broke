@@ -130,10 +130,28 @@
       },
       {
         "alwaysLoaded": false,
-        "file": "Still-1.png",
+        "file": "Table.png",
         "kind": "image",
         "metadata": "",
-        "name": "Still-1.png",
+        "name": "Table.png",
+        "smoothed": true,
+        "userAdded": true
+      },
+      {
+        "alwaysLoaded": false,
+        "file": "Button-Default.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "Button-Default.png",
+        "smoothed": true,
+        "userAdded": true
+      },
+      {
+        "alwaysLoaded": false,
+        "file": "Button-Click.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "Button-Click.png",
         "smoothed": true,
         "userAdded": true
       }
@@ -142,7 +160,20 @@
   },
   "objects": [],
   "objectsGroups": [],
-  "variables": [],
+  "variables": [
+    {
+      "name": "stateStart",
+      "value": "0"
+    },
+    {
+      "name": "stateActive",
+      "value": "1"
+    },
+    {
+      "name": "stateReverse",
+      "value": "2"
+    }
+  ],
   "layouts": [
     {
       "__REFERENCE_TO_SPLIT_OBJECT": true,

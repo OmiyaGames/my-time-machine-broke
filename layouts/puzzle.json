@@ -22,7 +22,7 @@
     "gridWidth": 32,
     "snap": true,
     "windowMask": false,
-    "zoomFactor": 0.568
+    "zoomFactor": 1.336
   },
   "objectsGroups": [],
   "variables": [],
@@ -101,6 +101,36 @@
       "numberProperties": [],
       "stringProperties": [],
       "initialVariables": []
+    },
+    {
+      "angle": 0,
+      "customSize": true,
+      "height": 48,
+      "layer": "",
+      "locked": false,
+      "name": "Button",
+      "width": 202,
+      "x": 237,
+      "y": 143,
+      "zOrder": 103,
+      "numberProperties": [],
+      "stringProperties": [],
+      "initialVariables": []
+    },
+    {
+      "angle": 0,
+      "customSize": false,
+      "height": 0,
+      "layer": "",
+      "locked": false,
+      "name": "RepairLabel",
+      "width": 0,
+      "x": 310,
+      "y": 155,
+      "zOrder": 104,
+      "numberProperties": [],
+      "stringProperties": [],
+      "initialVariables": []
     }
   ],
   "objects": [
@@ -113,6 +143,10 @@
         {
           "name": "positionQueue",
           "children": []
+        },
+        {
+          "name": "state",
+          "value": "1"
         }
       ],
       "behaviors": [],
@@ -219,13 +253,13 @@
               "timeBetweenFrames": 0.08,
               "sprites": [
                 {
-                  "hasCustomCollisionMask": true,
-                  "image": "Still-1.png",
+                  "hasCustomCollisionMask": false,
+                  "image": "Table.png",
                   "points": [],
                   "originPoint": {
                     "name": "origine",
-                    "x": 32,
-                    "y": 32
+                    "x": 0,
+                    "y": 0
                   },
                   "centerPoint": {
                     "automatic": true,
@@ -233,32 +267,47 @@
                     "x": 0,
                     "y": 0
                   },
-                  "customCollisionMask": [
-                    [
-                      {
-                        "x": 3,
-                        "y": 20
-                      },
-                      {
-                        "x": 62,
-                        "y": 20
-                      },
-                      {
-                        "x": 62,
-                        "y": 54
-                      },
-                      {
-                        "x": 3,
-                        "y": 54
-                      }
-                    ]
-                  ]
+                  "customCollisionMask": []
                 }
               ]
             }
           ]
         }
       ]
+    },
+    {
+      "bottomMargin": 1,
+      "height": 32,
+      "leftMargin": 1,
+      "name": "Button",
+      "rightMargin": 1,
+      "tags": "",
+      "texture": "Button-Default.png",
+      "tiled": true,
+      "topMargin": 1,
+      "type": "PanelSpriteObject::PanelSprite",
+      "width": 32,
+      "variables": [],
+      "behaviors": []
+    },
+    {
+      "bold": false,
+      "italic": false,
+      "name": "RepairLabel",
+      "smoothed": true,
+      "tags": "",
+      "type": "TextObject::Text",
+      "underlined": false,
+      "variables": [],
+      "behaviors": [],
+      "string": "Repair",
+      "font": "",
+      "characterSize": 20,
+      "color": {
+        "b": 0,
+        "g": 0,
+        "r": 0
+      }
     }
   ],
   "events": [
@@ -392,7 +441,7 @@
         "textG": 0,
         "textR": 0
       },
-      "comment": "Position the pointer when clicking the mouse",
+      "comment": "Check if mouse is down",
       "comment2": ""
     },
     {
@@ -412,42 +461,183 @@
           "subInstructions": []
         }
       ],
+      "actions": [],
+      "events": [
+        {
+          "disabled": false,
+          "folded": false,
+          "type": "BuiltinCommonInstructions::Standard",
+          "conditions": [
+            {
+              "type": {
+                "inverted": false,
+                "value": "SourisSurObjet"
+              },
+              "parameters": [
+                "Button",
+                "",
+                "",
+                ""
+              ],
+              "subInstructions": []
+            }
+          ],
+          "actions": [
+            {
+              "type": {
+                "inverted": false,
+                "value": "PanelSpriteObject::Image"
+              },
+              "parameters": [
+                "Button",
+                "\"Button-Click.png\"",
+                ""
+              ],
+              "subInstructions": []
+            }
+          ],
+          "events": []
+        },
+        {
+          "disabled": false,
+          "folded": false,
+          "type": "BuiltinCommonInstructions::Standard",
+          "conditions": [
+            {
+              "type": {
+                "inverted": true,
+                "value": "SourisSurObjet"
+              },
+              "parameters": [
+                "Button",
+                "",
+                "no",
+                ""
+              ],
+              "subInstructions": []
+            }
+          ],
+          "actions": [
+            {
+              "type": {
+                "inverted": false,
+                "value": "PanelSpriteObject::Image"
+              },
+              "parameters": [
+                "Button",
+                "\"Button-Default.png\"",
+                ""
+              ],
+              "subInstructions": []
+            }
+          ],
+          "events": []
+        },
+        {
+          "disabled": false,
+          "folded": false,
+          "type": "BuiltinCommonInstructions::Comment",
+          "color": {
+            "b": 109,
+            "g": 230,
+            "r": 255,
+            "textB": 0,
+            "textG": 0,
+            "textR": 0
+          },
+          "comment": "Position the pointer when clicking the mouse",
+          "comment2": ""
+        },
+        {
+          "disabled": false,
+          "folded": false,
+          "type": "BuiltinCommonInstructions::Standard",
+          "conditions": [
+            {
+              "type": {
+                "inverted": false,
+                "value": "SourisSurObjet"
+              },
+              "parameters": [
+                "Background",
+                "",
+                "",
+                ""
+              ],
+              "subInstructions": []
+            }
+          ],
+          "actions": [
+            {
+              "type": {
+                "inverted": false,
+                "value": "MettreXY"
+              },
+              "parameters": [
+                "Pointer",
+                "=",
+                "MouseX(, )",
+                "=",
+                "MouseY(, )"
+              ],
+              "subInstructions": []
+            },
+            {
+              "type": {
+                "inverted": false,
+                "value": "SeparateFromObjects"
+              },
+              "parameters": [
+                "Pointer",
+                "Table",
+                ""
+              ],
+              "subInstructions": []
+            },
+            {
+              "type": {
+                "inverted": false,
+                "value": "Opacity"
+              },
+              "parameters": [
+                "Pointer",
+                "=",
+                "255"
+              ],
+              "subInstructions": []
+            }
+          ],
+          "events": []
+        }
+      ]
+    },
+    {
+      "disabled": false,
+      "folded": false,
+      "type": "BuiltinCommonInstructions::Standard",
+      "conditions": [
+        {
+          "type": {
+            "inverted": false,
+            "value": "MouseButtonReleased"
+          },
+          "parameters": [
+            "",
+            "Left"
+          ],
+          "subInstructions": []
+        }
+      ],
       "actions": [
         {
           "type": {
             "inverted": false,
-            "value": "MettreXY"
+            "value": "PanelSpriteObject::Image"
           },
           "parameters": [
-            "Pointer",
-            "=",
-            "MouseX(, )",
-            "=",
-            "MouseY(, )"
-          ],
-          "subInstructions": []
-        },
-        {
-          "type": {
-            "inverted": false,
-            "value": "SeparateFromObjects"
-          },
-          "parameters": [
-            "Pointer",
-            "Table",
+            "Button",
+            "\"Button-Default.png\"",
             ""
-          ],
-          "subInstructions": []
-        },
-        {
-          "type": {
-            "inverted": false,
-            "value": "Opacity"
-          },
-          "parameters": [
-            "Pointer",
-            "=",
-            "255"
           ],
           "subInstructions": []
         }
