@@ -22,7 +22,7 @@
     "gridWidth": 32,
     "snap": true,
     "windowMask": false,
-    "zoomFactor": 1.336
+    "zoomFactor": 0.394
   },
   "objectsGroups": [],
   "variables": [],
@@ -35,8 +35,8 @@
       "locked": false,
       "name": "Player",
       "width": 0,
-      "x": 334,
-      "y": 270,
+      "x": 785,
+      "y": 221,
       "zOrder": 100,
       "numberProperties": [],
       "stringProperties": [],
@@ -80,8 +80,8 @@
       "locked": false,
       "name": "Table",
       "width": 200,
-      "x": 550,
-      "y": 174,
+      "x": 230,
+      "y": 484,
       "zOrder": 101,
       "numberProperties": [],
       "stringProperties": [],
@@ -95,8 +95,8 @@
       "locked": false,
       "name": "Table",
       "width": 199,
-      "x": 571,
-      "y": 635,
+      "x": 1162,
+      "y": 471,
       "zOrder": 102,
       "numberProperties": [],
       "stringProperties": [],
@@ -115,7 +115,12 @@
       "zOrder": 103,
       "numberProperties": [],
       "stringProperties": [],
-      "initialVariables": []
+      "initialVariables": [
+        {
+          "name": "action",
+          "value": "Print"
+        }
+      ]
     },
     {
       "angle": 0,
@@ -141,8 +146,16 @@
       "updateIfNotVisible": false,
       "variables": [
         {
-          "name": "positionQueue",
+          "name": "pastXs",
           "children": []
+        },
+        {
+          "name": "pastYs",
+          "children": []
+        },
+        {
+          "name": "numRecords",
+          "value": "0"
         },
         {
           "name": "state",
@@ -162,7 +175,13 @@
                 {
                   "hasCustomCollisionMask": false,
                   "image": "Player-Idle-01.png",
-                  "points": [],
+                  "points": [
+                    {
+                      "name": "Hold Item",
+                      "x": 32,
+                      "y": -32
+                    }
+                  ],
                   "originPoint": {
                     "name": "origine",
                     "x": 32,
@@ -274,40 +293,6 @@
           ]
         }
       ]
-    },
-    {
-      "bottomMargin": 1,
-      "height": 32,
-      "leftMargin": 1,
-      "name": "Button",
-      "rightMargin": 1,
-      "tags": "",
-      "texture": "Button-Default.png",
-      "tiled": true,
-      "topMargin": 1,
-      "type": "PanelSpriteObject::PanelSprite",
-      "width": 32,
-      "variables": [],
-      "behaviors": []
-    },
-    {
-      "bold": false,
-      "italic": false,
-      "name": "RepairLabel",
-      "smoothed": true,
-      "tags": "",
-      "type": "TextObject::Text",
-      "underlined": false,
-      "variables": [],
-      "behaviors": [],
-      "string": "Repair",
-      "font": "",
-      "characterSize": 20,
-      "color": {
-        "b": 0,
-        "g": 0,
-        "r": 0
-      }
     }
   ],
   "events": [
@@ -354,8 +339,52 @@
             "0"
           ],
           "subInstructions": []
+        },
+        {
+          "type": {
+            "inverted": false,
+            "value": "FixCamera"
+          },
+          "parameters": [
+            "",
+            "Player",
+            "0",
+            "0",
+            "Background.Width()",
+            "Background.Height()",
+            "no",
+            "",
+            ""
+          ],
+          "subInstructions": []
+        },
+        {
+          "type": {
+            "inverted": false,
+            "value": "FixCamera"
+          },
+          "parameters": [
+            "",
+            "Player",
+            "0",
+            "0",
+            "Background.Width()",
+            "Background.Height()",
+            "",
+            "\"Background layer\"",
+            ""
+          ],
+          "subInstructions": []
         }
       ],
+      "events": []
+    },
+    {
+      "disabled": false,
+      "folded": false,
+      "type": "BuiltinCommonInstructions::Standard",
+      "conditions": [],
+      "actions": [],
       "events": []
     },
     {
@@ -425,44 +454,75 @@
             ""
           ],
           "subInstructions": []
+        },
+        {
+          "type": {
+            "inverted": false,
+            "value": "ModVarObjet"
+          },
+          "parameters": [
+            "Player",
+            "pastXs[ToString(Variable(Player.numRecords))]",
+            "=",
+            "Player.PointX(\"Origin\")"
+          ],
+          "subInstructions": []
+        },
+        {
+          "type": {
+            "inverted": false,
+            "value": "ModVarObjet"
+          },
+          "parameters": [
+            "Player",
+            "pastYs[ToString(Variable(Player.numRecords))]",
+            "=",
+            "Player.PointY(\"Origin\")"
+          ],
+          "subInstructions": []
+        },
+        {
+          "type": {
+            "inverted": false,
+            "value": "ModVarObjet"
+          },
+          "parameters": [
+            "Player",
+            "numRecords",
+            "+",
+            "1"
+          ],
+          "subInstructions": []
         }
       ],
       "events": []
     },
     {
+      "colorB": 228,
+      "colorG": 176,
+      "colorR": 74,
+      "creationTime": 0,
       "disabled": false,
-      "folded": false,
-      "type": "BuiltinCommonInstructions::Comment",
-      "color": {
-        "b": 109,
-        "g": 230,
-        "r": 255,
-        "textB": 0,
-        "textG": 0,
-        "textR": 0
-      },
-      "comment": "Check if mouse is down",
-      "comment2": ""
-    },
-    {
-      "disabled": false,
-      "folded": false,
-      "type": "BuiltinCommonInstructions::Standard",
-      "conditions": [
-        {
-          "type": {
-            "inverted": false,
-            "value": "SourisBouton"
-          },
-          "parameters": [
-            "",
-            "Left"
-          ],
-          "subInstructions": []
-        }
-      ],
-      "actions": [],
+      "folded": true,
+      "name": "Pointer Behavior",
+      "source": "",
+      "type": "BuiltinCommonInstructions::Group",
       "events": [
+        {
+          "disabled": false,
+          "folded": false,
+          "type": "BuiltinCommonInstructions::Comment",
+          "color": {
+            "b": 109,
+            "g": 230,
+            "r": 255,
+            "textB": 0,
+            "textG": 0,
+            "textR": 0
+          },
+          "comment": "Move player towards the pointer if it's visible",
+          "comment2": ""
+        },
         {
           "disabled": false,
           "folded": false,
@@ -471,13 +531,12 @@
             {
               "type": {
                 "inverted": false,
-                "value": "SourisSurObjet"
+                "value": "Opacity"
               },
               "parameters": [
-                "Button",
-                "",
-                "",
-                ""
+                "Pointer",
+                ">",
+                "0"
               ],
               "subInstructions": []
             }
@@ -486,11 +545,25 @@
             {
               "type": {
                 "inverted": false,
-                "value": "PanelSpriteObject::Image"
+                "value": "AddForceVersPos"
               },
               "parameters": [
-                "Button",
-                "\"Button-Click.png\"",
+                "Player",
+                "Pointer.X()",
+                "Pointer.Y()",
+                "500",
+                ""
+              ],
+              "subInstructions": []
+            },
+            {
+              "type": {
+                "inverted": false,
+                "value": "SeparateFromObjects"
+              },
+              "parameters": [
+                "Player",
+                "Table",
                 ""
               ],
               "subInstructions": []
@@ -502,35 +575,8 @@
           "disabled": false,
           "folded": false,
           "type": "BuiltinCommonInstructions::Standard",
-          "conditions": [
-            {
-              "type": {
-                "inverted": true,
-                "value": "SourisSurObjet"
-              },
-              "parameters": [
-                "Button",
-                "",
-                "no",
-                ""
-              ],
-              "subInstructions": []
-            }
-          ],
-          "actions": [
-            {
-              "type": {
-                "inverted": false,
-                "value": "PanelSpriteObject::Image"
-              },
-              "parameters": [
-                "Button",
-                "\"Button-Default.png\"",
-                ""
-              ],
-              "subInstructions": []
-            }
-          ],
+          "conditions": [],
+          "actions": [],
           "events": []
         },
         {
@@ -545,7 +591,7 @@
             "textG": 0,
             "textR": 0
           },
-          "comment": "Position the pointer when clicking the mouse",
+          "comment": "Hide the pointer if the player reaches it",
           "comment2": ""
         },
         {
@@ -556,12 +602,12 @@
             {
               "type": {
                 "inverted": false,
-                "value": "SourisSurObjet"
+                "value": "Distance"
               },
               "parameters": [
-                "Background",
-                "",
-                "",
+                "Pointer",
+                "Player",
+                "40",
                 ""
               ],
               "subInstructions": []
@@ -571,191 +617,236 @@
             {
               "type": {
                 "inverted": false,
-                "value": "MettreXY"
-              },
-              "parameters": [
-                "Pointer",
-                "=",
-                "MouseX(, )",
-                "=",
-                "MouseY(, )"
-              ],
-              "subInstructions": []
-            },
-            {
-              "type": {
-                "inverted": false,
-                "value": "SeparateFromObjects"
-              },
-              "parameters": [
-                "Pointer",
-                "Table",
-                ""
-              ],
-              "subInstructions": []
-            },
-            {
-              "type": {
-                "inverted": false,
                 "value": "Opacity"
               },
               "parameters": [
                 "Pointer",
                 "=",
-                "255"
+                "0"
               ],
               "subInstructions": []
             }
           ],
           "events": []
         }
-      ]
+      ],
+      "parameters": []
     },
     {
+      "colorB": 228,
+      "colorG": 176,
+      "colorR": 74,
+      "creationTime": 0,
       "disabled": false,
-      "folded": false,
-      "type": "BuiltinCommonInstructions::Standard",
-      "conditions": [
+      "folded": true,
+      "name": "Mouse Behavior",
+      "source": "",
+      "type": "BuiltinCommonInstructions::Group",
+      "events": [
         {
-          "type": {
-            "inverted": false,
-            "value": "MouseButtonReleased"
+          "disabled": false,
+          "folded": false,
+          "type": "BuiltinCommonInstructions::Comment",
+          "color": {
+            "b": 109,
+            "g": 230,
+            "r": 255,
+            "textB": 0,
+            "textG": 0,
+            "textR": 0
           },
-          "parameters": [
-            "",
-            "Left"
-          ],
-          "subInstructions": []
-        }
-      ],
-      "actions": [
-        {
-          "type": {
-            "inverted": false,
-            "value": "PanelSpriteObject::Image"
-          },
-          "parameters": [
-            "Button",
-            "\"Button-Default.png\"",
-            ""
-          ],
-          "subInstructions": []
-        }
-      ],
-      "events": []
-    },
-    {
-      "disabled": false,
-      "folded": false,
-      "type": "BuiltinCommonInstructions::Comment",
-      "color": {
-        "b": 109,
-        "g": 230,
-        "r": 255,
-        "textB": 0,
-        "textG": 0,
-        "textR": 0
-      },
-      "comment": "Move player towards the pointer if it's visible",
-      "comment2": ""
-    },
-    {
-      "disabled": false,
-      "folded": false,
-      "type": "BuiltinCommonInstructions::Standard",
-      "conditions": [
-        {
-          "type": {
-            "inverted": false,
-            "value": "Opacity"
-          },
-          "parameters": [
-            "Pointer",
-            ">",
-            "0"
-          ],
-          "subInstructions": []
-        }
-      ],
-      "actions": [
-        {
-          "type": {
-            "inverted": false,
-            "value": "AddForceVersPos"
-          },
-          "parameters": [
-            "Player",
-            "Pointer.X()",
-            "Pointer.Y()",
-            "500",
-            ""
-          ],
-          "subInstructions": []
+          "comment": "Check if mouse is down",
+          "comment2": ""
         },
         {
-          "type": {
-            "inverted": false,
-            "value": "SeparateFromObjects"
-          },
-          "parameters": [
-            "Player",
-            "Table",
-            ""
+          "disabled": false,
+          "folded": false,
+          "type": "BuiltinCommonInstructions::Standard",
+          "conditions": [
+            {
+              "type": {
+                "inverted": false,
+                "value": "SourisBouton"
+              },
+              "parameters": [
+                "",
+                "Left"
+              ],
+              "subInstructions": []
+            }
           ],
-          "subInstructions": []
-        }
-      ],
-      "events": []
-    },
-    {
-      "disabled": false,
-      "folded": false,
-      "type": "BuiltinCommonInstructions::Comment",
-      "color": {
-        "b": 109,
-        "g": 230,
-        "r": 255,
-        "textB": 0,
-        "textG": 0,
-        "textR": 0
-      },
-      "comment": "Hide the pointer if the player reaches it",
-      "comment2": ""
-    },
-    {
-      "disabled": false,
-      "folded": false,
-      "type": "BuiltinCommonInstructions::Standard",
-      "conditions": [
+          "actions": [],
+          "events": [
+            {
+              "disabled": false,
+              "folded": false,
+              "type": "BuiltinCommonInstructions::Comment",
+              "color": {
+                "b": 109,
+                "g": 230,
+                "r": 255,
+                "textB": 0,
+                "textG": 0,
+                "textR": 0
+              },
+              "comment": "Animate button being pressed",
+              "comment2": ""
+            },
+            {
+              "disabled": false,
+              "folded": false,
+              "type": "BuiltinCommonInstructions::Standard",
+              "conditions": [],
+              "actions": [],
+              "events": []
+            },
+            {
+              "disabled": false,
+              "folded": false,
+              "type": "BuiltinCommonInstructions::Standard",
+              "conditions": [],
+              "actions": [],
+              "events": []
+            },
+            {
+              "disabled": false,
+              "folded": false,
+              "type": "BuiltinCommonInstructions::Comment",
+              "color": {
+                "b": 109,
+                "g": 230,
+                "r": 255,
+                "textB": 0,
+                "textG": 0,
+                "textR": 0
+              },
+              "comment": "Position the pointer when clicking the mouse",
+              "comment2": ""
+            },
+            {
+              "disabled": false,
+              "folded": false,
+              "type": "BuiltinCommonInstructions::Standard",
+              "conditions": [
+                {
+                  "type": {
+                    "inverted": false,
+                    "value": "SourisSurObjet"
+                  },
+                  "parameters": [
+                    "Background",
+                    "",
+                    "",
+                    ""
+                  ],
+                  "subInstructions": []
+                }
+              ],
+              "actions": [
+                {
+                  "type": {
+                    "inverted": false,
+                    "value": "MettreXY"
+                  },
+                  "parameters": [
+                    "Pointer",
+                    "=",
+                    "MouseX(, )",
+                    "=",
+                    "MouseY(, )"
+                  ],
+                  "subInstructions": []
+                },
+                {
+                  "type": {
+                    "inverted": false,
+                    "value": "SeparateFromObjects"
+                  },
+                  "parameters": [
+                    "Pointer",
+                    "Table",
+                    ""
+                  ],
+                  "subInstructions": []
+                },
+                {
+                  "type": {
+                    "inverted": false,
+                    "value": "Opacity"
+                  },
+                  "parameters": [
+                    "Pointer",
+                    "=",
+                    "255"
+                  ],
+                  "subInstructions": []
+                }
+              ],
+              "events": []
+            }
+          ]
+        },
         {
-          "type": {
-            "inverted": false,
-            "value": "Distance"
+          "disabled": false,
+          "folded": false,
+          "type": "BuiltinCommonInstructions::Comment",
+          "color": {
+            "b": 109,
+            "g": 230,
+            "r": 255,
+            "textB": 0,
+            "textG": 0,
+            "textR": 0
           },
-          "parameters": [
-            "Pointer",
-            "Player",
-            "40",
-            ""
-          ],
-          "subInstructions": []
-        }
-      ],
-      "actions": [
+          "comment": "Check if mouse was released",
+          "comment2": ""
+        },
         {
-          "type": {
-            "inverted": false,
-            "value": "Opacity"
-          },
-          "parameters": [
-            "Pointer",
-            "=",
-            "0"
+          "disabled": false,
+          "folded": false,
+          "type": "BuiltinCommonInstructions::Standard",
+          "conditions": [
+            {
+              "type": {
+                "inverted": false,
+                "value": "MouseButtonReleased"
+              },
+              "parameters": [
+                "",
+                "Left"
+              ],
+              "subInstructions": []
+            }
           ],
-          "subInstructions": []
+          "actions": [],
+          "events": [
+            {
+              "disabled": false,
+              "folded": false,
+              "type": "BuiltinCommonInstructions::Comment",
+              "color": {
+                "b": 109,
+                "g": 230,
+                "r": 255,
+                "textB": 0,
+                "textG": 0,
+                "textR": 0
+              },
+              "comment": "Checking if a button is clicked",
+              "comment2": ""
+            },
+            {
+              "disabled": false,
+              "folded": false,
+              "type": "BuiltinCommonInstructions::Standard",
+              "conditions": [],
+              "actions": [],
+              "events": []
+            }
+          ]
         }
       ],
-      "events": []
+      "parameters": []
     }
   ],
   "layers": [
