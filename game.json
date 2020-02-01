@@ -14,7 +14,7 @@
     "macExecutableFilename": "",
     "orientation": "landscape",
     "packageName": "com.example.gamename",
-    "projectFile": "D:\\Projects\\git\\Test\\game.json",
+    "projectFile": "D:\\Projects\\git\\ggj20\\game.json",
     "scaleMode": "linear",
     "sizeOnStartupMode": "adaptWidth",
     "useExternalSourceFiles": false,
@@ -103,39 +103,30 @@
     "resources": [
       {
         "alwaysLoaded": false,
-        "file": "NewObject-1.png",
+        "file": "Player-Idle-01.png",
         "kind": "image",
         "metadata": "",
-        "name": "NewObject-1.png",
+        "name": "Player-Idle-01.png",
         "smoothed": true,
-        "userAdded": true
+        "userAdded": false
       },
       {
         "alwaysLoaded": false,
-        "file": "NewObject-1-0.png",
+        "file": "Pointer-01.png",
         "kind": "image",
         "metadata": "",
-        "name": "NewObject-1-0.png",
+        "name": "Pointer-01.png",
         "smoothed": true,
-        "userAdded": true
+        "userAdded": false
       },
       {
         "alwaysLoaded": false,
-        "file": "NewFile-1.png",
+        "file": "DefaultBackground.png",
         "kind": "image",
         "metadata": "",
-        "name": "NewFile-1.png",
+        "name": "DefaultBackground.png",
         "smoothed": true,
-        "userAdded": true
-      },
-      {
-        "alwaysLoaded": false,
-        "file": "Idle-1.png",
-        "kind": "image",
-        "metadata": "",
-        "name": "Idle-1.png",
-        "smoothed": true,
-        "userAdded": true
+        "userAdded": false
       }
     ],
     "resourceFolders": []
