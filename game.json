@@ -127,6 +127,15 @@
         "name": "DefaultBackground.png",
         "smoothed": true,
         "userAdded": false
+      },
+      {
+        "alwaysLoaded": false,
+        "file": "Still-1.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "Still-1.png",
+        "smoothed": true,
+        "userAdded": true
       }
     ],
     "resourceFolders": []

@@ -50,8 +50,8 @@
       "locked": false,
       "name": "Pointer",
       "width": 0,
-      "x": 866,
-      "y": -95,
+      "x": -78,
+      "y": -96,
       "zOrder": 90,
       "numberProperties": [],
       "stringProperties": [],
@@ -71,6 +71,36 @@
       "numberProperties": [],
       "stringProperties": [],
       "initialVariables": []
+    },
+    {
+      "angle": 0,
+      "customSize": true,
+      "height": 144,
+      "layer": "",
+      "locked": false,
+      "name": "Table",
+      "width": 200,
+      "x": 550,
+      "y": 174,
+      "zOrder": 101,
+      "numberProperties": [],
+      "stringProperties": [],
+      "initialVariables": []
+    },
+    {
+      "angle": 0,
+      "customSize": true,
+      "height": 154,
+      "layer": "",
+      "locked": false,
+      "name": "Table",
+      "width": 199,
+      "x": 571,
+      "y": 635,
+      "zOrder": 102,
+      "numberProperties": [],
+      "stringProperties": [],
+      "initialVariables": []
     }
   ],
   "objects": [
@@ -85,21 +115,7 @@
           "children": []
         }
       ],
-      "behaviors": [
-        {
-          "maxSpeed": 400,
-          "name": "Pathfinding",
-          "type": "PathfindingBehavior::PathfindingBehavior",
-          "acceleration": 400,
-          "allowDiagonals": true,
-          "angleOffset": 0,
-          "angularMaxSpeed": 180,
-          "cellHeight": 10,
-          "cellWidth": 10,
-          "extraBorder": 0,
-          "rotateObject": false
-        }
-      ],
+      "behaviors": [],
       "animations": [
         {
           "name": "Idle",
@@ -185,9 +201,82 @@
       "width": 32,
       "variables": [],
       "behaviors": []
+    },
+    {
+      "name": "Table",
+      "tags": "",
+      "type": "Sprite",
+      "updateIfNotVisible": false,
+      "variables": [],
+      "behaviors": [],
+      "animations": [
+        {
+          "name": "Still",
+          "useMultipleDirections": false,
+          "directions": [
+            {
+              "looping": false,
+              "timeBetweenFrames": 0.08,
+              "sprites": [
+                {
+                  "hasCustomCollisionMask": true,
+                  "image": "Still-1.png",
+                  "points": [],
+                  "originPoint": {
+                    "name": "origine",
+                    "x": 32,
+                    "y": 32
+                  },
+                  "centerPoint": {
+                    "automatic": true,
+                    "name": "centre",
+                    "x": 0,
+                    "y": 0
+                  },
+                  "customCollisionMask": [
+                    [
+                      {
+                        "x": 3,
+                        "y": 20
+                      },
+                      {
+                        "x": 62,
+                        "y": 20
+                      },
+                      {
+                        "x": 62,
+                        "y": 54
+                      },
+                      {
+                        "x": 3,
+                        "y": 54
+                      }
+                    ]
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ]
     }
   ],
   "events": [
+    {
+      "disabled": false,
+      "folded": false,
+      "type": "BuiltinCommonInstructions::Comment",
+      "color": {
+        "b": 109,
+        "g": 230,
+        "r": 255,
+        "textB": 0,
+        "textG": 0,
+        "textR": 0
+      },
+      "comment": "Setup: Hide the cursor",
+      "comment2": ""
+    },
     {
       "disabled": false,
       "folded": false,
@@ -196,11 +285,10 @@
         {
           "type": {
             "inverted": false,
-            "value": "MouseButtonReleased"
+            "value": "DepartScene"
           },
           "parameters": [
-            "",
-            "Left"
+            ""
           ],
           "subInstructions": []
         }
@@ -209,33 +297,32 @@
         {
           "type": {
             "inverted": false,
-            "value": "MettreXY"
+            "value": "Opacity"
           },
           "parameters": [
             "Pointer",
             "=",
-            "MouseX(, )",
-            "=",
-            "MouseY(, )"
-          ],
-          "subInstructions": []
-        },
-        {
-          "type": {
-            "inverted": false,
-            "value": "PathfindingBehavior::SetDestination"
-          },
-          "parameters": [
-            "Player",
-            "Pathfinding",
-            "",
-            "MouseX(, )",
-            "MouseY(, )"
+            "0"
           ],
           "subInstructions": []
         }
       ],
       "events": []
+    },
+    {
+      "disabled": false,
+      "folded": false,
+      "type": "BuiltinCommonInstructions::Comment",
+      "color": {
+        "b": 109,
+        "g": 230,
+        "r": 255,
+        "textB": 0,
+        "textG": 0,
+        "textR": 0
+      },
+      "comment": "Make the Camera always follow the player",
+      "comment2": ""
     },
     {
       "disabled": false,
@@ -292,6 +379,193 @@
         }
       ],
       "events": []
+    },
+    {
+      "disabled": false,
+      "folded": false,
+      "type": "BuiltinCommonInstructions::Comment",
+      "color": {
+        "b": 109,
+        "g": 230,
+        "r": 255,
+        "textB": 0,
+        "textG": 0,
+        "textR": 0
+      },
+      "comment": "Position the pointer when clicking the mouse",
+      "comment2": ""
+    },
+    {
+      "disabled": false,
+      "folded": false,
+      "type": "BuiltinCommonInstructions::Standard",
+      "conditions": [
+        {
+          "type": {
+            "inverted": false,
+            "value": "SourisBouton"
+          },
+          "parameters": [
+            "",
+            "Left"
+          ],
+          "subInstructions": []
+        }
+      ],
+      "actions": [
+        {
+          "type": {
+            "inverted": false,
+            "value": "MettreXY"
+          },
+          "parameters": [
+            "Pointer",
+            "=",
+            "MouseX(, )",
+            "=",
+            "MouseY(, )"
+          ],
+          "subInstructions": []
+        },
+        {
+          "type": {
+            "inverted": false,
+            "value": "SeparateFromObjects"
+          },
+          "parameters": [
+            "Pointer",
+            "Table",
+            ""
+          ],
+          "subInstructions": []
+        },
+        {
+          "type": {
+            "inverted": false,
+            "value": "Opacity"
+          },
+          "parameters": [
+            "Pointer",
+            "=",
+            "255"
+          ],
+          "subInstructions": []
+        }
+      ],
+      "events": []
+    },
+    {
+      "disabled": false,
+      "folded": false,
+      "type": "BuiltinCommonInstructions::Comment",
+      "color": {
+        "b": 109,
+        "g": 230,
+        "r": 255,
+        "textB": 0,
+        "textG": 0,
+        "textR": 0
+      },
+      "comment": "Move player towards the pointer if it's visible",
+      "comment2": ""
+    },
+    {
+      "disabled": false,
+      "folded": false,
+      "type": "BuiltinCommonInstructions::Standard",
+      "conditions": [
+        {
+          "type": {
+            "inverted": false,
+            "value": "Opacity"
+          },
+          "parameters": [
+            "Pointer",
+            ">",
+            "0"
+          ],
+          "subInstructions": []
+        }
+      ],
+      "actions": [
+        {
+          "type": {
+            "inverted": false,
+            "value": "AddForceVersPos"
+          },
+          "parameters": [
+            "Player",
+            "Pointer.X()",
+            "Pointer.Y()",
+            "500",
+            ""
+          ],
+          "subInstructions": []
+        },
+        {
+          "type": {
+            "inverted": false,
+            "value": "SeparateFromObjects"
+          },
+          "parameters": [
+            "Player",
+            "Table",
+            ""
+          ],
+          "subInstructions": []
+        }
+      ],
+      "events": []
+    },
+    {
+      "disabled": false,
+      "folded": false,
+      "type": "BuiltinCommonInstructions::Comment",
+      "color": {
+        "b": 109,
+        "g": 230,
+        "r": 255,
+        "textB": 0,
+        "textG": 0,
+        "textR": 0
+      },
+      "comment": "Hide the pointer if the player reaches it",
+      "comment2": ""
+    },
+    {
+      "disabled": false,
+      "folded": false,
+      "type": "BuiltinCommonInstructions::Standard",
+      "conditions": [
+        {
+          "type": {
+            "inverted": false,
+            "value": "Distance"
+          },
+          "parameters": [
+            "Pointer",
+            "Player",
+            "40",
+            ""
+          ],
+          "subInstructions": []
+        }
+      ],
+      "actions": [
+        {
+          "type": {
+            "inverted": false,
+            "value": "Opacity"
+          },
+          "parameters": [
+            "Pointer",
+            "=",
+            "0"
+          ],
+          "subInstructions": []
+        }
+      ],
+      "events": []
     }
   ],
   "layers": [
@@ -330,10 +604,6 @@
     }
   ],
   "behaviorsSharedData": [
-    {
-      "name": "Pathfinding",
-      "type": "PathfindingBehavior::PathfindingBehavior"
-    },
     {
       "name": "Tween",
       "type": "Tween::TweenBehavior"
