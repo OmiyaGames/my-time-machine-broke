@@ -22,7 +22,7 @@
     "gridWidth": 32,
     "snap": true,
     "windowMask": false,
-    "zoomFactor": 0.25
+    "zoomFactor": 0.682
   },
   "objectsGroups": [
     {
@@ -1211,7 +1211,7 @@
     },
     {
       "disabled": false,
-      "folded": false,
+      "folded": true,
       "type": "BuiltinCommonInstructions::Standard",
       "conditions": [
         {
@@ -1283,8 +1283,47 @@
           },
           "parameters": [
             "",
+            "",
+            "\"Rewind2\"",
+            "no"
+          ],
+          "subInstructions": []
+        },
+        {
+          "type": {
+            "inverted": false,
+            "value": "EnableLayerEffect"
+          },
+          "parameters": [
+            "",
+            "",
+            "\"Rewind3\"",
+            "no"
+          ],
+          "subInstructions": []
+        },
+        {
+          "type": {
+            "inverted": false,
+            "value": "EnableLayerEffect"
+          },
+          "parameters": [
+            "",
             "\"Background layer\"",
             "\"Rewind1\"",
+            "no"
+          ],
+          "subInstructions": []
+        },
+        {
+          "type": {
+            "inverted": false,
+            "value": "EnableLayerEffect"
+          },
+          "parameters": [
+            "",
+            "\"Background layer\"",
+            "\"Rewind2\"",
             "no"
           ],
           "subInstructions": []
@@ -1718,7 +1757,7 @@
           "colorR": 74,
           "creationTime": 0,
           "disabled": false,
-          "folded": false,
+          "folded": true,
           "name": "Parts Behavior",
           "source": "",
           "type": "BuiltinCommonInstructions::Group",
@@ -1793,6 +1832,21 @@
                     "state",
                     "=",
                     "1"
+                  ],
+                  "subInstructions": []
+                },
+                {
+                  "type": {
+                    "inverted": false,
+                    "value": "PlaySoundCanal"
+                  },
+                  "parameters": [
+                    "",
+                    "Pickup.wav",
+                    "1",
+                    "",
+                    "80",
+                    "RandomFloatInRange(0.75, 1.25)"
                   ],
                   "subInstructions": []
                 }
@@ -1946,6 +2000,21 @@
                     "state",
                     "=",
                     "2"
+                  ],
+                  "subInstructions": []
+                },
+                {
+                  "type": {
+                    "inverted": false,
+                    "value": "PlaySoundCanal"
+                  },
+                  "parameters": [
+                    "",
+                    "PlacePart.wav",
+                    "1",
+                    "",
+                    "100",
+                    "RandomFloatInRange(0.75, 1.25)"
                   ],
                   "subInstructions": []
                 }
@@ -2119,7 +2188,7 @@
     },
     {
       "disabled": false,
-      "folded": false,
+      "folded": true,
       "type": "BuiltinCommonInstructions::Standard",
       "conditions": [
         {
@@ -2170,7 +2239,52 @@
               "subInstructions": []
             }
           ],
-          "events": []
+          "events": [
+            {
+              "disabled": false,
+              "folded": false,
+              "type": "BuiltinCommonInstructions::Standard",
+              "conditions": [
+                {
+                  "type": {
+                    "inverted": false,
+                    "value": "BuiltinCommonInstructions::Once"
+                  },
+                  "parameters": [],
+                  "subInstructions": []
+                },
+                {
+                  "type": {
+                    "inverted": false,
+                    "value": "SourisBouton"
+                  },
+                  "parameters": [
+                    "",
+                    "Left"
+                  ],
+                  "subInstructions": []
+                }
+              ],
+              "actions": [
+                {
+                  "type": {
+                    "inverted": false,
+                    "value": "PlaySoundCanal"
+                  },
+                  "parameters": [
+                    "",
+                    "ButtonClick.wav",
+                    "1",
+                    "",
+                    "75",
+                    "RandomFloatInRange(0.75, 1.25)"
+                  ],
+                  "subInstructions": []
+                }
+              ],
+              "events": []
+            }
+          ]
         },
         {
           "disabled": false,
@@ -2273,8 +2387,47 @@
               },
               "parameters": [
                 "",
+                "",
+                "\"Rewind2\"",
+                "yes"
+              ],
+              "subInstructions": []
+            },
+            {
+              "type": {
+                "inverted": false,
+                "value": "EnableLayerEffect"
+              },
+              "parameters": [
+                "",
+                "",
+                "\"Rewind3\"",
+                "yes"
+              ],
+              "subInstructions": []
+            },
+            {
+              "type": {
+                "inverted": false,
+                "value": "EnableLayerEffect"
+              },
+              "parameters": [
+                "",
                 "\"Background layer\"",
                 "\"Rewind1\"",
+                "yes"
+              ],
+              "subInstructions": []
+            },
+            {
+              "type": {
+                "inverted": false,
+                "value": "EnableLayerEffect"
+              },
+              "parameters": [
+                "",
+                "\"Background layer\"",
+                "\"Rewind2\"",
                 "yes"
               ],
               "subInstructions": []
@@ -2350,7 +2503,7 @@
     },
     {
       "disabled": false,
-      "folded": false,
+      "folded": true,
       "type": "BuiltinCommonInstructions::Standard",
       "conditions": [
         {
@@ -2465,6 +2618,18 @@
             "animated": true,
             "verticalLine": true
           }
+        },
+        {
+          "effectType": "Displacement",
+          "name": "Rewind2",
+          "doubleParameters": {
+            "scaleX": 20,
+            "scaleY": 10
+          },
+          "stringParameters": {
+            "displacementMapTexture": "DisplacementMap.png"
+          },
+          "booleanParameters": {}
         }
       ]
     },
@@ -2513,6 +2678,32 @@
           "booleanParameters": {
             "shadowOnly": false
           }
+        },
+        {
+          "effectType": "RGBSplit",
+          "name": "Rewind2",
+          "doubleParameters": {
+            "blueX": 0,
+            "blueY": 10,
+            "greenX": 0,
+            "greenY": 0,
+            "redX": -10,
+            "redY": 1
+          },
+          "stringParameters": {},
+          "booleanParameters": {}
+        },
+        {
+          "effectType": "Displacement",
+          "name": "Rewind3",
+          "doubleParameters": {
+            "scaleX": 20,
+            "scaleY": 10
+          },
+          "stringParameters": {
+            "displacementMapTexture": "DisplacementMap.png"
+          },
+          "booleanParameters": {}
         }
       ]
     },
