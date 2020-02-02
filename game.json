@@ -190,6 +190,15 @@
         "name": "Still-1.png",
         "smoothed": false,
         "userAdded": false
+      },
+      {
+        "alwaysLoaded": false,
+        "file": "Part-1.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "Part-1.png",
+        "smoothed": false,
+        "userAdded": true
       }
     ],
     "resourceFolders": []
