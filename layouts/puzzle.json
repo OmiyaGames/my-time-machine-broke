@@ -22,7 +22,7 @@
     "gridWidth": 32,
     "snap": true,
     "windowMask": false,
-    "zoomFactor": 0.538
+    "zoomFactor": 0.586
   },
   "objectsGroups": [],
   "variables": [],
@@ -193,6 +193,21 @@
       "x": 1120,
       "y": 783,
       "zOrder": 50,
+      "numberProperties": [],
+      "stringProperties": [],
+      "initialVariables": []
+    },
+    {
+      "angle": 0,
+      "customSize": false,
+      "height": 0,
+      "layer": "",
+      "locked": false,
+      "name": "Part",
+      "width": 0,
+      "x": 1305,
+      "y": 794,
+      "zOrder": 51,
       "numberProperties": [],
       "stringProperties": [],
       "initialVariables": []
