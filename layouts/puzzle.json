@@ -192,7 +192,7 @@
       "width": 32,
       "x": 1120,
       "y": 783,
-      "zOrder": 107,
+      "zOrder": 50,
       "numberProperties": [],
       "stringProperties": [],
       "initialVariables": []
@@ -224,6 +224,14 @@
         {
           "name": "partId",
           "value": "\"\""
+        },
+        {
+          "name": "numPartsCollected",
+          "value": "0"
+        },
+        {
+          "name": "isCarryingPart",
+          "value": "0"
         }
       ],
       "behaviors": [],
@@ -243,7 +251,7 @@
                     {
                       "name": "Item",
                       "x": 5,
-                      "y": -10
+                      "y": -5
                     }
                   ],
                   "originPoint": {
@@ -266,7 +274,7 @@
                     {
                       "name": "Item",
                       "x": 5,
-                      "y": -10
+                      "y": -5
                     }
                   ],
                   "originPoint": {
@@ -413,7 +421,24 @@
       "tags": "",
       "type": "Sprite",
       "updateIfNotVisible": false,
-      "variables": [],
+      "variables": [
+        {
+          "name": "pastXs",
+          "children": []
+        },
+        {
+          "name": "pastYs",
+          "children": []
+        },
+        {
+          "name": "numRecords",
+          "value": "0"
+        },
+        {
+          "name": "state",
+          "value": "0"
+        }
+      ],
       "behaviors": [
         {
           "name": "Tween",
@@ -435,8 +460,8 @@
                   "points": [],
                   "originPoint": {
                     "name": "origine",
-                    "x": 0,
-                    "y": 0
+                    "x": 16,
+                    "y": 16
                   },
                   "centerPoint": {
                     "automatic": true,
@@ -563,18 +588,6 @@
         {
           "type": {
             "inverted": false,
-            "value": "Record::RecordPosition"
-          },
-          "parameters": [
-            "",
-            "Player",
-            ""
-          ],
-          "subInstructions": []
-        },
-        {
-          "type": {
-            "inverted": false,
             "value": "Opacity"
           },
           "parameters": [
@@ -583,80 +596,44 @@
             "0"
           ],
           "subInstructions": []
-        }
-      ],
-      "events": []
-    },
-    {
-      "disabled": false,
-      "folded": false,
-      "type": "BuiltinCommonInstructions::Comment",
-      "color": {
-        "b": 109,
-        "g": 230,
-        "r": 255,
-        "textB": 0,
-        "textG": 0,
-        "textR": 0
-      },
-      "comment": "Make the Camera always follow the player",
-      "comment2": ""
-    },
-    {
-      "disabled": false,
-      "folded": false,
-      "type": "BuiltinCommonInstructions::Standard",
-      "conditions": [
-        {
-          "type": {
-            "inverted": false,
-            "value": "Toujours"
-          },
-          "parameters": [
-            ""
-          ],
-          "subInstructions": []
-        }
-      ],
-      "actions": [
-        {
-          "type": {
-            "inverted": false,
-            "value": "FixCamera"
-          },
-          "parameters": [
-            "",
-            "Player",
-            "0",
-            "0",
-            "Floor.Width()",
-            "Floor.Height()",
-            "no",
-            "",
-            ""
-          ],
-          "subInstructions": []
         },
         {
           "type": {
             "inverted": false,
-            "value": "FixCamera"
+            "value": "Record::RecordPosition"
           },
           "parameters": [
             "",
             "Player",
-            "0",
-            "0",
-            "Floor.Width()",
-            "Floor.Height()",
-            "",
-            "\"Background layer\"",
             ""
           ],
           "subInstructions": []
         }
       ],
-      "events": []
+      "events": [
+        {
+          "disabled": false,
+          "folded": false,
+          "type": "BuiltinCommonInstructions::ForEach",
+          "object": "Part",
+          "conditions": [],
+          "actions": [
+            {
+              "type": {
+                "inverted": false,
+                "value": "Record::RecordPosition"
+              },
+              "parameters": [
+                "",
+                "Part",
+                ""
+              ],
+              "subInstructions": []
+            }
+          ],
+          "events": []
+        }
+      ]
     },
     {
       "disabled": false,
@@ -928,13 +905,26 @@
                 {
                   "type": {
                     "inverted": false,
-                    "value": "VarObjetTxt"
+                    "value": "VarObjet"
                   },
                   "parameters": [
                     "Player",
-                    "partId",
+                    "isCarryingPart",
+                    "<=",
+                    "0"
+                  ],
+                  "subInstructions": []
+                },
+                {
+                  "type": {
+                    "inverted": false,
+                    "value": "VarObjet"
+                  },
+                  "parameters": [
+                    "Part",
+                    "state",
                     "=",
-                    "\"\""
+                    "0"
                   ],
                   "subInstructions": []
                 }
@@ -943,13 +933,26 @@
                 {
                   "type": {
                     "inverted": false,
-                    "value": "ModVarObjetTxt"
+                    "value": "ModVarObjet"
                   },
                   "parameters": [
                     "Player",
-                    "partId",
+                    "isCarryingPart",
                     "=",
-                    "Part.Animation()"
+                    "1"
+                  ],
+                  "subInstructions": []
+                },
+                {
+                  "type": {
+                    "inverted": false,
+                    "value": "ModVarObjet"
+                  },
+                  "parameters": [
+                    "Part",
+                    "state",
+                    "=",
+                    "1"
                   ],
                   "subInstructions": []
                 }
@@ -964,24 +967,13 @@
                 {
                   "type": {
                     "inverted": false,
-                    "value": "VarObjetTxt"
-                  },
-                  "parameters": [
-                    "Player",
-                    "partId",
-                    "!=",
-                    "\"\""
-                  ],
-                  "subInstructions": []
-                },
-                {
-                  "type": {
-                    "inverted": false,
-                    "value": "AnimationName"
+                    "value": "VarObjet"
                   },
                   "parameters": [
                     "Part",
-                    "Player.VariableString(partId)"
+                    "state",
+                    "=",
+                    "1"
                   ],
                   "subInstructions": []
                 }
@@ -990,14 +982,14 @@
                 {
                   "type": {
                     "inverted": false,
-                    "value": "AddForceVersPos"
+                    "value": "MettreXY"
                   },
                   "parameters": [
                     "Part",
+                    "=",
                     "Player.PointX(\"Item\")",
-                    "Player.PointY(\"Item\")",
-                    "1000",
-                    ""
+                    "=",
+                    "Player.PointY(\"Item\")"
                   ],
                   "subInstructions": []
                 }
@@ -1039,7 +1031,30 @@
               "subInstructions": []
             }
           ],
-          "events": []
+          "events": [
+            {
+              "disabled": false,
+              "folded": false,
+              "type": "BuiltinCommonInstructions::ForEach",
+              "object": "Part",
+              "conditions": [],
+              "actions": [
+                {
+                  "type": {
+                    "inverted": false,
+                    "value": "Record::RecordPosition"
+                  },
+                  "parameters": [
+                    "",
+                    "Part",
+                    ""
+                  ],
+                  "subInstructions": []
+                }
+              ],
+              "events": []
+            }
+          ]
         },
         {
           "disabled": false,
@@ -1173,6 +1188,100 @@
           "parameters": [
             "",
             "Player",
+            ""
+          ],
+          "subInstructions": []
+        }
+      ],
+      "events": [
+        {
+          "disabled": false,
+          "folded": false,
+          "type": "BuiltinCommonInstructions::ForEach",
+          "object": "Part",
+          "conditions": [],
+          "actions": [
+            {
+              "type": {
+                "inverted": false,
+                "value": "Record::MoveToLastRecord"
+              },
+              "parameters": [
+                "",
+                "Part",
+                ""
+              ],
+              "subInstructions": []
+            }
+          ],
+          "events": []
+        }
+      ]
+    },
+    {
+      "disabled": false,
+      "folded": false,
+      "type": "BuiltinCommonInstructions::Comment",
+      "color": {
+        "b": 109,
+        "g": 230,
+        "r": 255,
+        "textB": 0,
+        "textG": 0,
+        "textR": 0
+      },
+      "comment": "Make the Camera always follow the player",
+      "comment2": ""
+    },
+    {
+      "disabled": false,
+      "folded": false,
+      "type": "BuiltinCommonInstructions::Standard",
+      "conditions": [
+        {
+          "type": {
+            "inverted": false,
+            "value": "Toujours"
+          },
+          "parameters": [
+            ""
+          ],
+          "subInstructions": []
+        }
+      ],
+      "actions": [
+        {
+          "type": {
+            "inverted": false,
+            "value": "FixCamera"
+          },
+          "parameters": [
+            "",
+            "Player",
+            "0",
+            "0",
+            "Floor.Width()",
+            "Floor.Height()",
+            "no",
+            "",
+            ""
+          ],
+          "subInstructions": []
+        },
+        {
+          "type": {
+            "inverted": false,
+            "value": "FixCamera"
+          },
+          "parameters": [
+            "",
+            "Player",
+            "0",
+            "0",
+            "Floor.Width()",
+            "Floor.Height()",
+            "",
+            "\"Background layer\"",
             ""
           ],
           "subInstructions": []
