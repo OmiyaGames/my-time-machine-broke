@@ -347,6 +347,19 @@
           },
           "parameters": [
             "",
+            "",
+            "\"Rewind1\"",
+            "no"
+          ],
+          "subInstructions": []
+        },
+        {
+          "type": {
+            "inverted": false,
+            "value": "EnableLayerEffect"
+          },
+          "parameters": [
+            "",
             "\"Background layer\"",
             "\"Rewind1\"",
             "no"
@@ -724,7 +737,7 @@
               "parameters": [
                 "Player",
                 "\"Record\"",
-                "3/60"
+                "2/60"
               ],
               "subInstructions": []
             }
@@ -840,6 +853,32 @@
                 "0"
               ],
               "subInstructions": []
+            },
+            {
+              "type": {
+                "inverted": false,
+                "value": "EnableLayerEffect"
+              },
+              "parameters": [
+                "",
+                "",
+                "\"Rewind1\"",
+                "yes"
+              ],
+              "subInstructions": []
+            },
+            {
+              "type": {
+                "inverted": false,
+                "value": "EnableLayerEffect"
+              },
+              "parameters": [
+                "",
+                "\"Background layer\"",
+                "\"Rewind1\"",
+                "yes"
+              ],
+              "subInstructions": []
             }
           ],
           "events": []
@@ -880,21 +919,7 @@
           "subInstructions": []
         }
       ],
-      "actions": [
-        {
-          "type": {
-            "inverted": false,
-            "value": "EnableLayerEffect"
-          },
-          "parameters": [
-            "",
-            "\"Background layer\"",
-            "\"Rewind1\"",
-            "yes"
-          ],
-          "subInstructions": []
-        }
-      ],
+      "actions": [],
       "events": [
         {
           "disabled": false,
@@ -981,13 +1006,13 @@
           "effectType": "CRT",
           "name": "Rewind1",
           "doubleParameters": {
-            "curvature": 0,
-            "lineContrast": 0,
+            "curvature": 5,
+            "lineContrast": 0.5,
             "lineWidth": 0.2,
             "noise": 0.1,
             "noiseSize": 1,
-            "vignetting": 0.2,
-            "vignettingAlpha": 0.25,
+            "vignetting": 0.4,
+            "vignettingAlpha": 0.75,
             "vignettingBlur": 0.3
           },
           "stringParameters": {},
@@ -1013,7 +1038,21 @@
           "width": 0
         }
       ],
-      "effects": []
+      "effects": [
+        {
+          "effectType": "AdvancedBloom",
+          "name": "Rewind1",
+          "doubleParameters": {
+            "bloomScale": 0.7,
+            "blur": 4,
+            "brightness": 0.7,
+            "quality": 7,
+            "threshold": 0.5
+          },
+          "stringParameters": {},
+          "booleanParameters": {}
+        }
+      ]
     }
   ],
   "behaviorsSharedData": [
