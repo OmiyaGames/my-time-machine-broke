@@ -22,7 +22,7 @@
     "gridWidth": 32,
     "snap": true,
     "windowMask": false,
-    "zoomFactor": 0.586
+    "zoomFactor": 0.25
   },
   "objectsGroups": [
     {
@@ -55,7 +55,12 @@
       ]
     }
   ],
-  "variables": [],
+  "variables": [
+    {
+      "name": "numParts",
+      "value": "7"
+    }
+  ],
   "instances": [
     {
       "angle": 0,
@@ -220,8 +225,8 @@
       "locked": false,
       "name": "Part",
       "width": 32,
-      "x": 893,
-      "y": 455,
+      "x": 348,
+      "y": 311,
       "zOrder": 52,
       "numberProperties": [],
       "stringProperties": [],
@@ -235,8 +240,8 @@
       "locked": false,
       "name": "Part",
       "width": 0,
-      "x": 794,
-      "y": 660,
+      "x": 230,
+      "y": 1342,
       "zOrder": 51,
       "numberProperties": [],
       "stringProperties": [],
@@ -420,8 +425,8 @@
       "locked": false,
       "name": "Part",
       "width": 0,
-      "x": 1009,
-      "y": 727,
+      "x": 642,
+      "y": 879,
       "zOrder": 53,
       "numberProperties": [],
       "stringProperties": [],
@@ -435,8 +440,8 @@
       "locked": false,
       "name": "Part",
       "width": 0,
-      "x": 1111,
-      "y": 615,
+      "x": 2107,
+      "y": 299,
       "zOrder": 54,
       "numberProperties": [],
       "stringProperties": [],
@@ -450,8 +455,8 @@
       "locked": false,
       "name": "Part",
       "width": 0,
-      "x": 1301,
-      "y": 699,
+      "x": 2019,
+      "y": 1361,
       "zOrder": 55,
       "numberProperties": [],
       "stringProperties": [],
@@ -465,8 +470,8 @@
       "locked": false,
       "name": "Part",
       "width": 0,
-      "x": 1367,
-      "y": 508,
+      "x": 1421,
+      "y": 540,
       "zOrder": 56,
       "numberProperties": [],
       "stringProperties": [],
@@ -480,8 +485,8 @@
       "locked": false,
       "name": "Part",
       "width": 0,
-      "x": 1547,
-      "y": 679,
+      "x": 1445,
+      "y": 1055,
       "zOrder": 57,
       "numberProperties": [],
       "stringProperties": [],
@@ -1018,17 +1023,7 @@
       "type": "TextObject::Text",
       "underlined": false,
       "variables": [],
-      "behaviors": [
-        {
-          "bottomEdgeAnchor": 2,
-          "leftEdgeAnchor": 1,
-          "name": "Anchor",
-          "relativeToOriginalWindowSize": true,
-          "rightEdgeAnchor": 2,
-          "topEdgeAnchor": 2,
-          "type": "AnchorBehavior::AnchorBehavior"
-        }
-      ],
+      "behaviors": [],
       "string": "Turning it On!",
       "font": "",
       "characterSize": 20,
@@ -1039,29 +1034,19 @@
       }
     },
     {
-      "bottomMargin": 1,
+      "bottomMargin": 2,
       "height": 32,
-      "leftMargin": 1,
+      "leftMargin": 2,
       "name": "Button",
-      "rightMargin": 1,
+      "rightMargin": 2,
       "tags": "",
       "texture": "Button-Default.png",
-      "tiled": false,
-      "topMargin": 1,
+      "tiled": true,
+      "topMargin": 2,
       "type": "PanelSpriteObject::PanelSprite",
       "width": 32,
       "variables": [],
-      "behaviors": [
-        {
-          "bottomEdgeAnchor": 2,
-          "leftEdgeAnchor": 1,
-          "name": "Anchor",
-          "relativeToOriginalWindowSize": true,
-          "rightEdgeAnchor": 2,
-          "topEdgeAnchor": 2,
-          "type": "AnchorBehavior::AnchorBehavior"
-        }
-      ]
+      "behaviors": []
     },
     {
       "name": "Blank",
@@ -1121,17 +1106,7 @@
       "type": "TextObject::Text",
       "underlined": false,
       "variables": [],
-      "behaviors": [
-        {
-          "bottomEdgeAnchor": 1,
-          "leftEdgeAnchor": 1,
-          "name": "Anchor",
-          "relativeToOriginalWindowSize": true,
-          "rightEdgeAnchor": 2,
-          "topEdgeAnchor": 1,
-          "type": "AnchorBehavior::AnchorBehavior"
-        }
-      ],
+      "behaviors": [],
       "string": "...that goes here, and done!",
       "font": "",
       "characterSize": 40,
@@ -1150,17 +1125,7 @@
       "type": "TextObject::Text",
       "underlined": false,
       "variables": [],
-      "behaviors": [
-        {
-          "bottomEdgeAnchor": 1,
-          "leftEdgeAnchor": 1,
-          "name": "Anchor",
-          "relativeToOriginalWindowSize": true,
-          "rightEdgeAnchor": 2,
-          "topEdgeAnchor": 1,
-          "type": "AnchorBehavior::AnchorBehavior"
-        }
-      ],
+      "behaviors": [],
       "string": "I think that fixes everything!",
       "font": "",
       "characterSize": 40,
@@ -1179,17 +1144,7 @@
       "type": "TextObject::Text",
       "underlined": false,
       "variables": [],
-      "behaviors": [
-        {
-          "bottomEdgeAnchor": 1,
-          "leftEdgeAnchor": 1,
-          "name": "Anchor",
-          "relativeToOriginalWindowSize": true,
-          "rightEdgeAnchor": 2,
-          "topEdgeAnchor": 1,
-          "type": "AnchorBehavior::AnchorBehavior"
-        }
-      ],
+      "behaviors": [],
       "string": "And the only way to be sure this",
       "font": "",
       "characterSize": 40,
@@ -1208,17 +1163,7 @@
       "type": "TextObject::Text",
       "underlined": false,
       "variables": [],
-      "behaviors": [
-        {
-          "bottomEdgeAnchor": 1,
-          "leftEdgeAnchor": 1,
-          "name": "Anchor",
-          "relativeToOriginalWindowSize": true,
-          "rightEdgeAnchor": 2,
-          "topEdgeAnchor": 1,
-          "type": "AnchorBehavior::AnchorBehavior"
-        }
-      ],
+      "behaviors": [],
       "string": "Time Reversal Machine",
       "font": "",
       "characterSize": 40,
@@ -1237,17 +1182,7 @@
       "type": "TextObject::Text",
       "underlined": false,
       "variables": [],
-      "behaviors": [
-        {
-          "bottomEdgeAnchor": 1,
-          "leftEdgeAnchor": 1,
-          "name": "Anchor",
-          "relativeToOriginalWindowSize": true,
-          "rightEdgeAnchor": 2,
-          "topEdgeAnchor": 1,
-          "type": "AnchorBehavior::AnchorBehavior"
-        }
-      ],
+      "behaviors": [],
       "string": "is working, is by...",
       "font": "",
       "characterSize": 40,
@@ -1374,6 +1309,18 @@
             ""
           ],
           "subInstructions": []
+        },
+        {
+          "type": {
+            "inverted": false,
+            "value": "ModVarScene"
+          },
+          "parameters": [
+            "numParts",
+            "=",
+            "0"
+          ],
+          "subInstructions": []
         }
       ],
       "events": [
@@ -1393,6 +1340,28 @@
                 "",
                 "Part",
                 ""
+              ],
+              "subInstructions": []
+            }
+          ],
+          "events": []
+        },
+        {
+          "disabled": false,
+          "folded": false,
+          "type": "BuiltinCommonInstructions::ForEach",
+          "object": "PartSlot",
+          "conditions": [],
+          "actions": [
+            {
+              "type": {
+                "inverted": false,
+                "value": "ModVarScene"
+              },
+              "parameters": [
+                "numParts",
+                "+",
+                "1"
               ],
               "subInstructions": []
             }
@@ -1484,12 +1453,12 @@
         "textG": 0,
         "textR": 0
       },
-      "comment": "While Player is active:",
+      "comment": "While Player is active",
       "comment2": ""
     },
     {
       "disabled": false,
-      "folded": false,
+      "folded": true,
       "type": "BuiltinCommonInstructions::Standard",
       "conditions": [
         {
@@ -1514,7 +1483,7 @@
           "colorR": 74,
           "creationTime": 0,
           "disabled": false,
-          "folded": false,
+          "folded": true,
           "name": "Mouse Behavior",
           "source": "",
           "type": "BuiltinCommonInstructions::Group",
@@ -1587,7 +1556,7 @@
           "colorR": 74,
           "creationTime": 0,
           "disabled": false,
-          "folded": false,
+          "folded": true,
           "name": "Pointer Behavior",
           "source": "",
           "type": "BuiltinCommonInstructions::Group",
@@ -1942,7 +1911,80 @@
                   "subInstructions": []
                 }
               ],
-              "events": []
+              "events": [
+                {
+                  "disabled": false,
+                  "folded": false,
+                  "type": "BuiltinCommonInstructions::Comment",
+                  "color": {
+                    "b": 109,
+                    "g": 230,
+                    "r": 255,
+                    "textB": 0,
+                    "textG": 0,
+                    "textR": 0
+                  },
+                  "comment": "Check if this is the last number of parts needed to be collected",
+                  "comment2": ""
+                },
+                {
+                  "disabled": false,
+                  "folded": false,
+                  "type": "BuiltinCommonInstructions::Standard",
+                  "conditions": [
+                    {
+                      "type": {
+                        "inverted": false,
+                        "value": "VarObjet"
+                      },
+                      "parameters": [
+                        "Player",
+                        "numPartsCollected",
+                        ">=",
+                        "Variable(numParts)"
+                      ],
+                      "subInstructions": []
+                    }
+                  ],
+                  "actions": [
+                    {
+                      "type": {
+                        "inverted": false,
+                        "value": "ModVarObjet"
+                      },
+                      "parameters": [
+                        "Player",
+                        "state",
+                        "=",
+                        "GlobalVariable(stateCutscene)"
+                      ],
+                      "subInstructions": []
+                    },
+                    {
+                      "type": {
+                        "inverted": false,
+                        "value": "Cache"
+                      },
+                      "parameters": [
+                        "Pointer"
+                      ],
+                      "subInstructions": []
+                    },
+                    {
+                      "type": {
+                        "inverted": false,
+                        "value": "ShowLayer"
+                      },
+                      "parameters": [
+                        "",
+                        "\"GUI layer\""
+                      ],
+                      "subInstructions": []
+                    }
+                  ],
+                  "events": []
+                }
+              ]
             }
           ],
           "parameters": []
@@ -1964,7 +2006,7 @@
         },
         {
           "disabled": false,
-          "folded": false,
+          "folded": true,
           "type": "BuiltinCommonInstructions::Standard",
           "conditions": [
             {
@@ -2018,6 +2060,112 @@
               "events": []
             }
           ]
+        }
+      ]
+    },
+    {
+      "disabled": false,
+      "folded": false,
+      "type": "BuiltinCommonInstructions::Comment",
+      "color": {
+        "b": 109,
+        "g": 230,
+        "r": 255,
+        "textB": 0,
+        "textG": 0,
+        "textR": 0
+      },
+      "comment": "While Player is in cutscene",
+      "comment2": ""
+    },
+    {
+      "disabled": false,
+      "folded": false,
+      "type": "BuiltinCommonInstructions::Standard",
+      "conditions": [
+        {
+          "type": {
+            "inverted": false,
+            "value": "VarObjet"
+          },
+          "parameters": [
+            "Player",
+            "state",
+            "=",
+            "GlobalVariable(stateCutscene)"
+          ],
+          "subInstructions": []
+        }
+      ],
+      "actions": [],
+      "events": [
+        {
+          "disabled": false,
+          "folded": false,
+          "type": "BuiltinCommonInstructions::Standard",
+          "conditions": [
+            {
+              "type": {
+                "inverted": false,
+                "value": "Record::IsButtonHovered"
+              },
+              "parameters": [
+                "",
+                "Button",
+                ""
+              ],
+              "subInstructions": []
+            }
+          ],
+          "actions": [
+            {
+              "type": {
+                "inverted": false,
+                "value": "PanelSpriteObject::Image"
+              },
+              "parameters": [
+                "Button",
+                "\"Button-Click.png\"",
+                ""
+              ],
+              "subInstructions": []
+            }
+          ],
+          "events": []
+        },
+        {
+          "disabled": false,
+          "folded": false,
+          "type": "BuiltinCommonInstructions::Standard",
+          "conditions": [
+            {
+              "type": {
+                "inverted": true,
+                "value": "Record::IsButtonHovered"
+              },
+              "parameters": [
+                "",
+                "Button",
+                ""
+              ],
+              "subInstructions": []
+            }
+          ],
+          "actions": [
+            {
+              "type": {
+                "inverted": false,
+                "value": "PanelSpriteObject::Image"
+              },
+              "parameters": [
+                "Button",
+                "\"Button-Default.png\"",
+                ""
+              ],
+              "subInstructions": []
+            }
+          ],
+          "events": []
         },
         {
           "disabled": false,
@@ -2031,7 +2179,7 @@
             "textG": 0,
             "textR": 0
           },
-          "comment": "JUST TESTING: press space to reverse everything!",
+          "comment": "When button is clicked, switch to time rewind mode",
           "comment2": ""
         },
         {
@@ -2042,11 +2190,12 @@
             {
               "type": {
                 "inverted": false,
-                "value": "KeyPressed"
+                "value": "Record::IsButtonClicked"
               },
               "parameters": [
                 "",
-                "Space"
+                "Button",
+                ""
               ],
               "subInstructions": []
             }
@@ -2062,18 +2211,6 @@
                 "state",
                 "=",
                 "GlobalVariable(stateReverse)"
-              ],
-              "subInstructions": []
-            },
-            {
-              "type": {
-                "inverted": false,
-                "value": "Opacity"
-              },
-              "parameters": [
-                "Pointer",
-                "=",
-                "0"
               ],
               "subInstructions": []
             },
@@ -2102,6 +2239,29 @@
                 "yes"
               ],
               "subInstructions": []
+            },
+            {
+              "type": {
+                "inverted": false,
+                "value": "HideLayer"
+              },
+              "parameters": [
+                "",
+                "\"GUI layer\""
+              ],
+              "subInstructions": []
+            },
+            {
+              "type": {
+                "inverted": false,
+                "value": "ModVarGlobal"
+              },
+              "parameters": [
+                "numTimesPlayed",
+                "+",
+                "1"
+              ],
+              "subInstructions": []
             }
           ],
           "events": []
@@ -2120,7 +2280,7 @@
         "textG": 0,
         "textR": 0
       },
-      "comment": "While Player is in reverse",
+      "comment": "While Player is in rewind",
       "comment2": ""
     },
     {
@@ -2173,6 +2333,40 @@
                 "",
                 "Part",
                 ""
+              ],
+              "subInstructions": []
+            }
+          ],
+          "events": []
+        },
+        {
+          "disabled": false,
+          "folded": false,
+          "type": "BuiltinCommonInstructions::Standard",
+          "conditions": [
+            {
+              "type": {
+                "inverted": true,
+                "value": "Record::HasRecords"
+              },
+              "parameters": [
+                "",
+                "Player",
+                ""
+              ],
+              "subInstructions": []
+            }
+          ],
+          "actions": [
+            {
+              "type": {
+                "inverted": false,
+                "value": "Scene"
+              },
+              "parameters": [
+                "",
+                "\"Title Screen\"",
+                "yes"
               ],
               "subInstructions": []
             }
