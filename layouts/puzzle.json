@@ -478,7 +478,7 @@
     },
     {
       "disabled": false,
-      "folded": false,
+      "folded": true,
       "type": "BuiltinCommonInstructions::Standard",
       "conditions": [
         {
@@ -724,7 +724,7 @@
               },
               "parameters": [
                 "Player",
-                "pastXs[ToString(Player.Variable(numRecords))]",
+                "pastXs[ToString(Player.VariableChildCount(pastXs))]",
                 "=",
                 "Player.PointX(\"Origin\")"
               ],
@@ -737,7 +737,7 @@
               },
               "parameters": [
                 "Player",
-                "pastYs[ToString(Player.Variable(numRecords))]",
+                "pastYs[ToString(Player.VariableChildCount(pastYs))]",
                 "=",
                 "Player.PointY(\"Origin\")"
               ],
@@ -867,7 +867,19 @@
           "subInstructions": []
         }
       ],
-      "actions": [],
+      "actions": [
+        {
+          "type": {
+            "inverted": false,
+            "value": "ChangeBlendMode"
+          },
+          "parameters": [
+            "Player",
+            "1"
+          ],
+          "subInstructions": []
+        }
+      ],
       "events": [
         {
           "disabled": false,
@@ -881,7 +893,7 @@
               },
               "parameters": [
                 "Player",
-                "numRecords",
+                "Player.VariableChildCount(pastXs)",
                 ">",
                 "0"
               ],
@@ -892,14 +904,84 @@
             {
               "type": {
                 "inverted": false,
-                "value": "MettreXY"
+                "value": "ModVarObjet"
+              },
+              "parameters": [
+                "Player",
+                "numRecords",
+                "-",
+                "1"
+              ],
+              "subInstructions": []
+            },
+            {
+              "type": {
+                "inverted": false,
+                "value": "MettreX"
               },
               "parameters": [
                 "Player",
                 "=",
-                "Player.VariableChildCount(pastXs[ToString(Player.Variable(numRecords) - 1)])",
+                "Player.Variable(pastXs[ToString(Player.Variable(numRecords))])"
+              ],
+              "subInstructions": []
+            },
+            {
+              "type": {
+                "inverted": false,
+                "value": "ObjectVariableRemoveChild"
+              },
+              "parameters": [
+                "Player",
+                "pastXs",
+                "ToString(Player.Variable(numRecords))"
+              ],
+              "subInstructions": []
+            }
+          ],
+          "events": []
+        },
+        {
+          "disabled": true,
+          "folded": false,
+          "type": "BuiltinCommonInstructions::Standard",
+          "conditions": [
+            {
+              "type": {
+                "inverted": false,
+                "value": "VarObjet"
+              },
+              "parameters": [
+                "Player",
+                "Player.VariableChildCount(pastYs)",
+                ">",
+                "0"
+              ],
+              "subInstructions": []
+            }
+          ],
+          "actions": [
+            {
+              "type": {
+                "inverted": false,
+                "value": "MettreY"
+              },
+              "parameters": [
+                "Player",
                 "=",
-                ""
+                "Player.Variable(pastYs[ToString(Player.VariableChildCount(pastYs) - 1)])"
+              ],
+              "subInstructions": []
+            },
+            {
+              "type": {
+                "inverted": false,
+                "value": "ObjectVariableRemoveChild"
+              },
+              "parameters": [
+                "Player",
+                "pastYs",
+                "ToString(Player.VariableChildCount(pastYs) - 1)"
               ],
               "subInstructions": []
             }
