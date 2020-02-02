@@ -1251,6 +1251,21 @@
         {
           "type": {
             "inverted": false,
+            "value": "PlaySoundCanal"
+          },
+          "parameters": [
+            "",
+            "bensound-perception.ogg",
+            "2",
+            "yes",
+            "75",
+            ""
+          ],
+          "subInstructions": []
+        },
+        {
+          "type": {
+            "inverted": false,
             "value": "EnableLayerEffect"
           },
           "parameters": [
@@ -2284,6 +2299,32 @@
                 "numTimesPlayed",
                 "+",
                 "1"
+              ],
+              "subInstructions": []
+            },
+            {
+              "type": {
+                "inverted": false,
+                "value": "StopMusicCanal"
+              },
+              "parameters": [
+                "",
+                "2"
+              ],
+              "subInstructions": []
+            },
+            {
+              "type": {
+                "inverted": false,
+                "value": "PlaySoundCanal"
+              },
+              "parameters": [
+                "",
+                "bensound-perception-reversed.ogg",
+                "2",
+                "yes",
+                "85",
+                ""
               ],
               "subInstructions": []
             }

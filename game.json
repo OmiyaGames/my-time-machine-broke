@@ -259,6 +259,20 @@
         "name": "Table.png",
         "smoothed": false,
         "userAdded": false
+      },
+      {
+        "file": "bensound-perception.ogg",
+        "kind": "audio",
+        "metadata": "",
+        "name": "bensound-perception.ogg",
+        "userAdded": false
+      },
+      {
+        "file": "bensound-perception-reversed.ogg",
+        "kind": "audio",
+        "metadata": "",
+        "name": "bensound-perception-reversed.ogg",
+        "userAdded": true
       }
     ],
     "resourceFolders": []
