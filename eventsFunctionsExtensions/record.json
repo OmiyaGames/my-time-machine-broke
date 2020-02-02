@@ -28,7 +28,7 @@
               "parameters": [
                 "RecordObject",
                 "\"Record\"",
-                "2/60"
+                "0.05"
               ],
               "subInstructions": []
             }
@@ -60,7 +60,7 @@
               "parameters": [
                 "RecordObject",
                 "\"Record\"",
-                "2/60"
+                "0.05"
               ],
               "subInstructions": []
             }
