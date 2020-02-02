@@ -22,7 +22,7 @@
     "gridWidth": 32,
     "snap": true,
     "windowMask": false,
-    "zoomFactor": 0.394
+    "zoomFactor": 0.154
   },
   "objectsGroups": [],
   "variables": [],
@@ -75,13 +75,13 @@
     {
       "angle": 0,
       "customSize": true,
-      "height": 144,
+      "height": 128,
       "layer": "",
       "locked": false,
-      "name": "Table",
-      "width": 200,
-      "x": 230,
-      "y": 484,
+      "name": "Blocker",
+      "width": 2310,
+      "x": 0,
+      "y": 0,
       "zOrder": 101,
       "numberProperties": [],
       "stringProperties": [],
@@ -90,13 +90,13 @@
     {
       "angle": 0,
       "customSize": true,
-      "height": 154,
+      "height": 1476,
       "layer": "",
       "locked": false,
-      "name": "Table",
-      "width": 199,
-      "x": 1162,
-      "y": 471,
+      "name": "Blocker",
+      "width": 128,
+      "x": -128,
+      "y": 128,
       "zOrder": 102,
       "numberProperties": [],
       "stringProperties": [],
@@ -148,6 +148,36 @@
       "x": 0,
       "y": 0,
       "zOrder": 20,
+      "numberProperties": [],
+      "stringProperties": [],
+      "initialVariables": []
+    },
+    {
+      "angle": 0,
+      "customSize": true,
+      "height": 1476,
+      "layer": "",
+      "locked": false,
+      "name": "Blocker",
+      "width": 128,
+      "x": 2310,
+      "y": 128,
+      "zOrder": 105,
+      "numberProperties": [],
+      "stringProperties": [],
+      "initialVariables": []
+    },
+    {
+      "angle": 0,
+      "customSize": true,
+      "height": 128,
+      "layer": "",
+      "locked": false,
+      "name": "Blocker",
+      "width": 2310,
+      "x": 0,
+      "y": 1604,
+      "zOrder": 106,
       "numberProperties": [],
       "stringProperties": [],
       "initialVariables": []
@@ -321,7 +351,7 @@
       "behaviors": []
     },
     {
-      "name": "Table",
+      "name": "Blocker",
       "tags": "",
       "type": "Sprite",
       "updateIfNotVisible": false,
@@ -338,7 +368,7 @@
               "sprites": [
                 {
                   "hasCustomCollisionMask": false,
-                  "image": "Table.png",
+                  "image": "Still-1.png",
                   "points": [],
                   "originPoint": {
                     "name": "origine",
@@ -476,6 +506,18 @@
             "",
             "Player",
             ""
+          ],
+          "subInstructions": []
+        },
+        {
+          "type": {
+            "inverted": false,
+            "value": "Opacity"
+          },
+          "parameters": [
+            "Blocker",
+            "=",
+            "0"
           ],
           "subInstructions": []
         }
@@ -669,7 +711,7 @@
           "colorR": 74,
           "creationTime": 0,
           "disabled": false,
-          "folded": true,
+          "folded": false,
           "name": "Pointer Behavior",
           "source": "",
           "type": "BuiltinCommonInstructions::Group",
@@ -729,7 +771,7 @@
                   },
                   "parameters": [
                     "Player",
-                    "Table",
+                    "Blocker",
                     ""
                   ],
                   "subInstructions": []

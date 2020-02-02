@@ -181,6 +181,15 @@
         "name": "Pointer-02.png",
         "smoothed": false,
         "userAdded": false
+      },
+      {
+        "alwaysLoaded": false,
+        "file": "Still-1.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "Still-1.png",
+        "smoothed": false,
+        "userAdded": false
       }
     ],
     "resourceFolders": []
