@@ -199,6 +199,24 @@
         "name": "Part-1.png",
         "smoothed": false,
         "userAdded": true
+      },
+      {
+        "alwaysLoaded": false,
+        "file": "PartSlot-1.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "PartSlot-1.png",
+        "smoothed": false,
+        "userAdded": true
+      },
+      {
+        "alwaysLoaded": false,
+        "file": "Rug-1.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "Rug-1.png",
+        "smoothed": false,
+        "userAdded": false
       }
     ],
     "resourceFolders": []
