@@ -163,6 +163,15 @@
         "name": "DefaultBackground.png",
         "smoothed": false,
         "userAdded": false
+      },
+      {
+        "alwaysLoaded": false,
+        "file": "DefaultWall.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "DefaultWall.png",
+        "smoothed": false,
+        "userAdded": false
       }
     ],
     "resourceFolders": []
