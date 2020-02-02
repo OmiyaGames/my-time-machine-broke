@@ -343,6 +343,19 @@
         {
           "type": {
             "inverted": false,
+            "value": "EnableLayerEffect"
+          },
+          "parameters": [
+            "",
+            "\"Background layer\"",
+            "\"Rewind1\"",
+            "no"
+          ],
+          "subInstructions": []
+        },
+        {
+          "type": {
+            "inverted": false,
             "value": "FixCamera"
           },
           "parameters": [
@@ -478,7 +491,7 @@
     },
     {
       "disabled": false,
-      "folded": true,
+      "folded": false,
       "type": "BuiltinCommonInstructions::Standard",
       "conditions": [
         {
@@ -711,7 +724,7 @@
               "parameters": [
                 "Player",
                 "\"Record\"",
-                "0.05"
+                "3/60"
               ],
               "subInstructions": []
             }
@@ -871,11 +884,13 @@
         {
           "type": {
             "inverted": false,
-            "value": "ChangeBlendMode"
+            "value": "EnableLayerEffect"
           },
           "parameters": [
-            "Player",
-            "1"
+            "",
+            "\"Background layer\"",
+            "\"Rewind1\"",
+            "yes"
           ],
           "subInstructions": []
         }
@@ -893,7 +908,7 @@
               },
               "parameters": [
                 "Player",
-                "Player.VariableChildCount(pastXs)",
+                "numRecords",
                 ">",
                 "0"
               ],
@@ -929,47 +944,12 @@
             {
               "type": {
                 "inverted": false,
-                "value": "ObjectVariableRemoveChild"
-              },
-              "parameters": [
-                "Player",
-                "pastXs",
-                "ToString(Player.Variable(numRecords))"
-              ],
-              "subInstructions": []
-            }
-          ],
-          "events": []
-        },
-        {
-          "disabled": true,
-          "folded": false,
-          "type": "BuiltinCommonInstructions::Standard",
-          "conditions": [
-            {
-              "type": {
-                "inverted": false,
-                "value": "VarObjet"
-              },
-              "parameters": [
-                "Player",
-                "Player.VariableChildCount(pastYs)",
-                ">",
-                "0"
-              ],
-              "subInstructions": []
-            }
-          ],
-          "actions": [
-            {
-              "type": {
-                "inverted": false,
                 "value": "MettreY"
               },
               "parameters": [
                 "Player",
                 "=",
-                "Player.Variable(pastYs[ToString(Player.VariableChildCount(pastYs) - 1)])"
+                "Player.Variable(pastYs[ToString(Player.Variable(numRecords))])"
               ],
               "subInstructions": []
             },
@@ -980,8 +960,8 @@
               },
               "parameters": [
                 "Player",
-                "pastYs",
-                "ToString(Player.VariableChildCount(pastYs) - 1)"
+                "pastXs",
+                "ToString(Player.Variable(numRecords))"
               ],
               "subInstructions": []
             }
@@ -998,13 +978,23 @@
       "cameras": [],
       "effects": [
         {
-          "effectType": "Noise",
-          "name": "Effect",
+          "effectType": "CRT",
+          "name": "Rewind1",
           "doubleParameters": {
-            "noise": 0.5
+            "curvature": 0,
+            "lineContrast": 0,
+            "lineWidth": 0.2,
+            "noise": 0.1,
+            "noiseSize": 1,
+            "vignetting": 0.2,
+            "vignettingAlpha": 0.25,
+            "vignettingBlur": 0.3
           },
           "stringParameters": {},
-          "booleanParameters": {}
+          "booleanParameters": {
+            "animated": true,
+            "verticalLine": true
+          }
         }
       ]
     },
