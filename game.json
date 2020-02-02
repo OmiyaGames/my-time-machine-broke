@@ -15,7 +15,7 @@
     "orientation": "landscape",
     "packageName": "com.example.gamename",
     "projectFile": "D:\\Projects\\git\\ggj20\\game.json",
-    "scaleMode": "linear",
+    "scaleMode": "nearest",
     "sizeOnStartupMode": "adaptWidth",
     "useExternalSourceFiles": false,
     "version": "1.0.0",
@@ -107,7 +107,7 @@
         "kind": "image",
         "metadata": "",
         "name": "Player-Idle-01.png",
-        "smoothed": true,
+        "smoothed": false,
         "userAdded": false
       },
       {
@@ -116,16 +116,7 @@
         "kind": "image",
         "metadata": "",
         "name": "Pointer-01.png",
-        "smoothed": true,
-        "userAdded": false
-      },
-      {
-        "alwaysLoaded": false,
-        "file": "DefaultBackground.png",
-        "kind": "image",
-        "metadata": "",
-        "name": "DefaultBackground.png",
-        "smoothed": true,
+        "smoothed": false,
         "userAdded": false
       },
       {
@@ -134,7 +125,7 @@
         "kind": "image",
         "metadata": "",
         "name": "Table.png",
-        "smoothed": true,
+        "smoothed": false,
         "userAdded": true
       },
       {
@@ -154,6 +145,24 @@
         "name": "Button-Click.png",
         "smoothed": true,
         "userAdded": true
+      },
+      {
+        "alwaysLoaded": false,
+        "file": "Player-Idle-02.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "Player-Idle-02.png",
+        "smoothed": false,
+        "userAdded": true
+      },
+      {
+        "alwaysLoaded": false,
+        "file": "DefaultBackground.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "DefaultBackground.png",
+        "smoothed": false,
+        "userAdded": false
       }
     ],
     "resourceFolders": []

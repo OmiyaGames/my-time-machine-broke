@@ -22,21 +22,21 @@
     "gridWidth": 32,
     "snap": true,
     "windowMask": false,
-    "zoomFactor": 0.394
+    "zoomFactor": 0.25
   },
   "objectsGroups": [],
   "variables": [],
   "instances": [
     {
       "angle": 0,
-      "customSize": false,
-      "height": 0,
+      "customSize": true,
+      "height": 103,
       "layer": "",
       "locked": false,
       "name": "Player",
-      "width": 0,
-      "x": 785,
-      "y": 221,
+      "width": 55,
+      "x": 1161,
+      "y": 396,
       "zOrder": 100,
       "numberProperties": [],
       "stringProperties": [],
@@ -60,11 +60,11 @@
     {
       "angle": 0,
       "customSize": true,
-      "height": 1006,
+      "height": 1592,
       "layer": "Background layer",
       "locked": false,
-      "name": "Background",
-      "width": 1577,
+      "name": "Floor",
+      "width": 2331,
       "x": 0,
       "y": 0,
       "zOrder": 1,
@@ -169,23 +169,46 @@
           "useMultipleDirections": false,
           "directions": [
             {
-              "looping": false,
-              "timeBetweenFrames": 0.08,
+              "looping": true,
+              "timeBetweenFrames": 0.25,
               "sprites": [
                 {
                   "hasCustomCollisionMask": false,
                   "image": "Player-Idle-01.png",
                   "points": [
                     {
-                      "name": "Hold Item",
-                      "x": 32,
-                      "y": -32
+                      "name": "Item",
+                      "x": 5,
+                      "y": -10
                     }
                   ],
                   "originPoint": {
                     "name": "origine",
-                    "x": 32,
-                    "y": 32
+                    "x": 5,
+                    "y": 20
+                  },
+                  "centerPoint": {
+                    "automatic": true,
+                    "name": "centre",
+                    "x": 0,
+                    "y": 0
+                  },
+                  "customCollisionMask": []
+                },
+                {
+                  "hasCustomCollisionMask": false,
+                  "image": "Player-Idle-02.png",
+                  "points": [
+                    {
+                      "name": "Item",
+                      "x": 5,
+                      "y": -10
+                    }
+                  ],
+                  "originPoint": {
+                    "name": "origine",
+                    "x": 5,
+                    "y": 20
                   },
                   "centerPoint": {
                     "automatic": true,
@@ -247,7 +270,17 @@
     },
     {
       "height": 32,
-      "name": "Background",
+      "name": "Wall",
+      "tags": "",
+      "texture": "DefaultBackground.png",
+      "type": "TiledSpriteObject::TiledSprite",
+      "width": 32,
+      "variables": [],
+      "behaviors": []
+    },
+    {
+      "height": 32,
+      "name": "Floor",
       "tags": "",
       "texture": "DefaultBackground.png",
       "type": "TiledSpriteObject::TiledSprite",
@@ -376,8 +409,8 @@
             "Player",
             "0",
             "0",
-            "Background.Width()",
-            "Background.Height()",
+            "Floor.Width()",
+            "Floor.Height()",
             "no",
             "",
             ""
@@ -394,8 +427,8 @@
             "Player",
             "0",
             "0",
-            "Background.Width()",
-            "Background.Height()",
+            "Floor.Width()",
+            "Floor.Height()",
             "",
             "\"Background layer\"",
             ""
@@ -459,8 +492,8 @@
             "Player",
             "0",
             "0",
-            "Background.Width()",
-            "Background.Height()",
+            "Floor.Width()",
+            "Floor.Height()",
             "no",
             "",
             ""
@@ -477,8 +510,8 @@
             "Player",
             "0",
             "0",
-            "Background.Width()",
-            "Background.Height()",
+            "Floor.Width()",
+            "Floor.Height()",
             "",
             "\"Background layer\"",
             ""
@@ -546,7 +579,7 @@
                     "value": "SourisSurObjet"
                   },
                   "parameters": [
-                    "Background",
+                    "Floor",
                     "",
                     "",
                     ""
