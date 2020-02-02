@@ -13,15 +13,15 @@
     "linuxExecutableFilename": "",
     "macExecutableFilename": "",
     "orientation": "landscape",
-    "packageName": "com.example.gamename",
+    "packageName": "com.OmiyaGames.MyTimeMachineIsBroken",
     "projectFile": "D:\\Projects\\git\\ggj20\\game.json",
     "scaleMode": "nearest",
     "sizeOnStartupMode": "adaptWidth",
     "useExternalSourceFiles": false,
-    "version": "1.0.0",
+    "version": "0.1.0",
     "winExecutableFilename": "",
     "winExecutableIconFile": "",
-    "name": "Global Game Jam 2020",
+    "name": "My Time Machine Is Broken!",
     "author": "Omiya Games",
     "windowWidth": 800,
     "windowHeight": 600,
@@ -172,6 +172,15 @@
         "name": "DefaultWall.png",
         "smoothed": false,
         "userAdded": false
+      },
+      {
+        "alwaysLoaded": false,
+        "file": "Pointer-02.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "Pointer-02.png",
+        "smoothed": false,
+        "userAdded": false
       }
     ],
     "resourceFolders": []
@@ -180,7 +189,7 @@
   "objectsGroups": [],
   "variables": [
     {
-      "name": "stateStart",
+      "name": "stateCutscene",
       "value": "0"
     },
     {
