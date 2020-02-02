@@ -1,12 +1,12 @@
 {
-  "author": "",
+  "author": "Taro Omiya",
   "description": "",
   "extensionNamespace": "",
   "fullName": "Recorded Library",
   "name": "Record",
   "shortDescription": "Library for recording and reversing things",
   "tags": "",
-  "version": "",
+  "version": "0.1",
   "eventsFunctions": [
     {
       "description": "Checks whether the object is ready to be recorded.",
