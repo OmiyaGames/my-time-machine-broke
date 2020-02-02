@@ -1536,7 +1536,7 @@
     },
     {
       "disabled": false,
-      "folded": true,
+      "folded": false,
       "type": "BuiltinCommonInstructions::Standard",
       "conditions": [
         {
@@ -1757,7 +1757,7 @@
           "colorR": 74,
           "creationTime": 0,
           "disabled": false,
-          "folded": true,
+          "folded": false,
           "name": "Parts Behavior",
           "source": "",
           "type": "BuiltinCommonInstructions::Group",
@@ -1845,7 +1845,7 @@
                     "Pickup.wav",
                     "1",
                     "",
-                    "80",
+                    "60",
                     "RandomFloatInRange(0.75, 1.25)"
                   ],
                   "subInstructions": []
