@@ -9,6 +9,72 @@
   "version": "0.1",
   "eventsFunctions": [
     {
+      "description": "",
+      "fullName": "Clear Recording",
+      "functionType": "Action",
+      "name": "ClearRecording",
+      "sentence": "Clear _PARAM1_ position recording",
+      "events": [
+        {
+          "disabled": false,
+          "folded": false,
+          "type": "BuiltinCommonInstructions::Standard",
+          "conditions": [],
+          "actions": [
+            {
+              "type": {
+                "inverted": false,
+                "value": "ObjectVariableClearChildren"
+              },
+              "parameters": [
+                "RecordObject",
+                "pastXs"
+              ],
+              "subInstructions": []
+            },
+            {
+              "type": {
+                "inverted": false,
+                "value": "ObjectVariableClearChildren"
+              },
+              "parameters": [
+                "RecordObject",
+                "pastYs"
+              ],
+              "subInstructions": []
+            },
+            {
+              "type": {
+                "inverted": false,
+                "value": "ModVarObjet"
+              },
+              "parameters": [
+                "RecordObject",
+                "numRecords",
+                "=",
+                "0"
+              ],
+              "subInstructions": []
+            }
+          ],
+          "events": []
+        }
+      ],
+      "parameters": [
+        {
+          "codeOnly": false,
+          "defaultValue": "",
+          "description": "",
+          "longDescription": "",
+          "name": "RecordObject",
+          "optional": false,
+          "supplementaryInformation": "",
+          "type": "objectList"
+        }
+      ],
+      "objectGroups": []
+    },
+    {
       "description": "Checks whether the object is ready to be recorded.",
       "fullName": "Ready to Record?",
       "functionType": "Condition",
@@ -483,7 +549,7 @@
             {
               "type": {
                 "inverted": false,
-                "value": "SourisBouton"
+                "value": "MouseButtonReleased"
               },
               "parameters": [
                 "",
@@ -546,7 +612,7 @@
             {
               "type": {
                 "inverted": true,
-                "value": "SourisBouton"
+                "value": "MouseButtonReleased"
               },
               "parameters": [
                 "",

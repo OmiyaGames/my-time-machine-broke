@@ -35,8 +35,8 @@
       "locked": false,
       "name": "TitleLabel",
       "width": 0,
-      "x": 178,
-      "y": 179,
+      "x": 147,
+      "y": 181,
       "zOrder": 1,
       "numberProperties": [],
       "stringProperties": [],
@@ -99,7 +99,7 @@
       "underlined": false,
       "variables": [],
       "behaviors": [],
-      "string": "My Time Machine Broke!",
+      "string": "My Time Machine Is Broken!",
       "font": "",
       "characterSize": 40,
       "color": {
@@ -170,7 +170,7 @@
       "conditions": [
         {
           "type": {
-            "inverted": false,
+            "inverted": true,
             "value": "Record::IsButtonHovered"
           },
           "parameters": [
@@ -204,7 +204,7 @@
       "conditions": [
         {
           "type": {
-            "inverted": true,
+            "inverted": false,
             "value": "Record::IsButtonHovered"
           },
           "parameters": [
@@ -278,7 +278,7 @@
               },
               "parameters": [
                 "numTimesPlayed",
-                ">",
+                "<=",
                 "0"
               ],
               "subInstructions": []
@@ -292,7 +292,7 @@
               },
               "parameters": [
                 "",
-                "\"Puzzle\"",
+                "\"Instructions\"",
                 "yes"
               ],
               "subInstructions": []
@@ -312,7 +312,7 @@
               },
               "parameters": [
                 "numTimesPlayed",
-                "<=",
+                ">",
                 "0"
               ],
               "subInstructions": []

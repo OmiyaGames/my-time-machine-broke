@@ -1,0 +1,921 @@
+{
+  "b": 59,
+  "disableInputWhenNotFocused": true,
+  "mangledName": "Instructions",
+  "name": "Instructions",
+  "oglFOV": 90,
+  "oglZFar": 500,
+  "oglZNear": 1,
+  "r": 44,
+  "standardSortMethod": true,
+  "stopSoundsOnStartup": true,
+  "title": "",
+  "v": 42,
+  "uiSettings": {
+    "grid": false,
+    "gridB": 255,
+    "gridG": 180,
+    "gridHeight": 32,
+    "gridOffsetX": 0,
+    "gridOffsetY": 0,
+    "gridR": 158,
+    "gridWidth": 32,
+    "snap": true,
+    "windowMask": false,
+    "zoomFactor": 0.808
+  },
+  "objectsGroups": [],
+  "variables": [],
+  "instances": [
+    {
+      "angle": 0,
+      "customSize": false,
+      "height": 0,
+      "layer": "",
+      "locked": false,
+      "name": "TitleLabel",
+      "width": 0,
+      "x": 18,
+      "y": 12,
+      "zOrder": 1,
+      "numberProperties": [],
+      "stringProperties": [],
+      "initialVariables": []
+    },
+    {
+      "angle": 0,
+      "customSize": false,
+      "height": 0,
+      "layer": "",
+      "locked": false,
+      "name": "Instructions1",
+      "width": 0,
+      "x": 18,
+      "y": 89,
+      "zOrder": 2,
+      "numberProperties": [],
+      "stringProperties": [],
+      "initialVariables": []
+    },
+    {
+      "angle": 0,
+      "customSize": true,
+      "height": 50,
+      "layer": "",
+      "locked": false,
+      "name": "Button",
+      "width": 302,
+      "x": 250,
+      "y": 506,
+      "zOrder": 3,
+      "numberProperties": [],
+      "stringProperties": [],
+      "initialVariables": []
+    },
+    {
+      "angle": 0,
+      "customSize": false,
+      "height": 0,
+      "layer": "",
+      "locked": false,
+      "name": "ButtonLabel",
+      "width": 0,
+      "x": 302,
+      "y": 520,
+      "zOrder": 4,
+      "numberProperties": [],
+      "stringProperties": [],
+      "initialVariables": []
+    },
+    {
+      "angle": 0,
+      "customSize": true,
+      "height": 77,
+      "layer": "",
+      "locked": false,
+      "name": "Player",
+      "width": 42,
+      "x": 197,
+      "y": 142,
+      "zOrder": 5,
+      "numberProperties": [],
+      "stringProperties": [],
+      "initialVariables": []
+    },
+    {
+      "angle": 0,
+      "customSize": false,
+      "height": 0,
+      "layer": "",
+      "locked": false,
+      "name": "Instructions2",
+      "width": 0,
+      "x": 236,
+      "y": 90,
+      "zOrder": 6,
+      "numberProperties": [],
+      "stringProperties": [],
+      "initialVariables": []
+    },
+    {
+      "angle": 0,
+      "customSize": false,
+      "height": 0,
+      "layer": "",
+      "locked": false,
+      "name": "Instructions3",
+      "width": 0,
+      "x": 14,
+      "y": 158,
+      "zOrder": 7,
+      "numberProperties": [],
+      "stringProperties": [],
+      "initialVariables": []
+    },
+    {
+      "angle": 0,
+      "customSize": true,
+      "height": 44,
+      "layer": "",
+      "locked": false,
+      "name": "Part",
+      "width": 44,
+      "x": 202,
+      "y": 177,
+      "zOrder": 8,
+      "numberProperties": [],
+      "stringProperties": [],
+      "initialVariables": []
+    },
+    {
+      "angle": 0,
+      "customSize": false,
+      "height": 0,
+      "layer": "",
+      "locked": false,
+      "name": "Instructions4",
+      "width": 0,
+      "x": 231,
+      "y": 160,
+      "zOrder": 9,
+      "numberProperties": [],
+      "stringProperties": [],
+      "initialVariables": []
+    },
+    {
+      "angle": 0,
+      "customSize": false,
+      "height": 0,
+      "layer": "",
+      "locked": false,
+      "name": "Instructions5",
+      "width": 0,
+      "x": 17,
+      "y": 204,
+      "zOrder": 10,
+      "numberProperties": [],
+      "stringProperties": [],
+      "initialVariables": []
+    },
+    {
+      "angle": 0,
+      "customSize": false,
+      "height": 0,
+      "layer": "",
+      "locked": false,
+      "name": "Instructions3",
+      "width": 0,
+      "x": 12,
+      "y": 263,
+      "zOrder": 11,
+      "numberProperties": [],
+      "stringProperties": [],
+      "initialVariables": []
+    },
+    {
+      "angle": 0,
+      "customSize": false,
+      "height": 0,
+      "layer": "",
+      "locked": false,
+      "name": "FixMeRug",
+      "width": 0,
+      "x": 180,
+      "y": 251,
+      "zOrder": 12,
+      "numberProperties": [],
+      "stringProperties": [],
+      "initialVariables": []
+    },
+    {
+      "angle": 0,
+      "customSize": false,
+      "height": 0,
+      "layer": "",
+      "locked": false,
+      "name": "Instructions6",
+      "width": 0,
+      "x": 319,
+      "y": 266,
+      "zOrder": 13,
+      "numberProperties": [],
+      "stringProperties": [],
+      "initialVariables": []
+    },
+    {
+      "angle": 0,
+      "customSize": true,
+      "height": 44,
+      "layer": "",
+      "locked": false,
+      "name": "Part",
+      "width": 44,
+      "x": 540,
+      "y": 287,
+      "zOrder": 14,
+      "numberProperties": [],
+      "stringProperties": [],
+      "initialVariables": []
+    },
+    {
+      "angle": 0,
+      "customSize": false,
+      "height": 0,
+      "layer": "",
+      "locked": false,
+      "name": "Instructions7",
+      "width": 0,
+      "x": 573,
+      "y": 268,
+      "zOrder": 15,
+      "numberProperties": [],
+      "stringProperties": [],
+      "initialVariables": []
+    },
+    {
+      "angle": 0,
+      "customSize": false,
+      "height": 0,
+      "layer": "",
+      "locked": false,
+      "name": "CreditsLabel",
+      "width": 0,
+      "x": 13,
+      "y": 336,
+      "zOrder": 16,
+      "numberProperties": [],
+      "stringProperties": [],
+      "initialVariables": []
+    },
+    {
+      "angle": 0,
+      "customSize": false,
+      "height": 0,
+      "layer": "",
+      "locked": false,
+      "name": "Credits1",
+      "width": 0,
+      "x": 16,
+      "y": 387,
+      "zOrder": 17,
+      "numberProperties": [],
+      "stringProperties": [],
+      "initialVariables": []
+    },
+    {
+      "angle": 0,
+      "customSize": false,
+      "height": 0,
+      "layer": "",
+      "locked": false,
+      "name": "Credits2",
+      "width": 0,
+      "x": 14,
+      "y": 428,
+      "zOrder": 18,
+      "numberProperties": [],
+      "stringProperties": [],
+      "initialVariables": []
+    },
+    {
+      "angle": 0,
+      "customSize": false,
+      "height": 0,
+      "layer": "",
+      "locked": false,
+      "name": "Credits3",
+      "width": 0,
+      "x": 14,
+      "y": 454,
+      "zOrder": 19,
+      "numberProperties": [],
+      "stringProperties": [],
+      "initialVariables": []
+    }
+  ],
+  "objects": [
+    {
+      "bold": true,
+      "italic": false,
+      "name": "TitleLabel",
+      "smoothed": true,
+      "tags": "",
+      "type": "TextObject::Text",
+      "underlined": false,
+      "variables": [],
+      "behaviors": [],
+      "string": "How to Play:",
+      "font": "",
+      "characterSize": 40,
+      "color": {
+        "b": 255,
+        "g": 255,
+        "r": 255
+      }
+    },
+    {
+      "bold": false,
+      "italic": false,
+      "name": "Instructions1",
+      "smoothed": true,
+      "tags": "",
+      "type": "TextObject::Text",
+      "underlined": false,
+      "variables": [],
+      "behaviors": [],
+      "string": "Guide me,",
+      "font": "",
+      "characterSize": 30,
+      "color": {
+        "b": 255,
+        "g": 255,
+        "r": 255
+      }
+    },
+    {
+      "name": "Player",
+      "tags": "",
+      "type": "Sprite",
+      "updateIfNotVisible": false,
+      "variables": [
+        {
+          "name": "pastXs",
+          "children": []
+        },
+        {
+          "name": "pastYs",
+          "children": []
+        },
+        {
+          "name": "numRecords",
+          "value": "0"
+        },
+        {
+          "name": "state",
+          "value": "1"
+        },
+        {
+          "name": "partId",
+          "value": "\"\""
+        },
+        {
+          "name": "numPartsCollected",
+          "value": "0"
+        },
+        {
+          "name": "isCarryingPart",
+          "value": "0"
+        }
+      ],
+      "behaviors": [],
+      "animations": [
+        {
+          "name": "Idle",
+          "useMultipleDirections": false,
+          "directions": [
+            {
+              "looping": true,
+              "timeBetweenFrames": 0.25,
+              "sprites": [
+                {
+                  "hasCustomCollisionMask": false,
+                  "image": "Player-Idle-01.png",
+                  "points": [
+                    {
+                      "name": "Item",
+                      "x": 5,
+                      "y": -5
+                    }
+                  ],
+                  "originPoint": {
+                    "name": "origine",
+                    "x": 5,
+                    "y": 20
+                  },
+                  "centerPoint": {
+                    "automatic": true,
+                    "name": "centre",
+                    "x": 0,
+                    "y": 0
+                  },
+                  "customCollisionMask": []
+                },
+                {
+                  "hasCustomCollisionMask": false,
+                  "image": "Player-Idle-02.png",
+                  "points": [
+                    {
+                      "name": "Item",
+                      "x": 5,
+                      "y": -5
+                    }
+                  ],
+                  "originPoint": {
+                    "name": "origine",
+                    "x": 5,
+                    "y": 20
+                  },
+                  "centerPoint": {
+                    "automatic": true,
+                    "name": "centre",
+                    "x": 0,
+                    "y": 0
+                  },
+                  "customCollisionMask": []
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "bold": false,
+      "italic": false,
+      "name": "Instructions2",
+      "smoothed": true,
+      "tags": "",
+      "type": "TextObject::Text",
+      "underlined": false,
+      "variables": [],
+      "behaviors": [],
+      "string": ", by clicking on the screen.",
+      "font": "",
+      "characterSize": 30,
+      "color": {
+        "b": 255,
+        "g": 255,
+        "r": 255
+      }
+    },
+    {
+      "bold": false,
+      "italic": false,
+      "name": "Instructions3",
+      "smoothed": true,
+      "tags": "",
+      "type": "TextObject::Text",
+      "underlined": false,
+      "variables": [],
+      "behaviors": [],
+      "string": "Move me to",
+      "font": "",
+      "characterSize": 30,
+      "color": {
+        "b": 255,
+        "g": 255,
+        "r": 255
+      }
+    },
+    {
+      "name": "Part",
+      "tags": "",
+      "type": "Sprite",
+      "updateIfNotVisible": false,
+      "variables": [
+        {
+          "name": "pastXs",
+          "children": []
+        },
+        {
+          "name": "pastYs",
+          "children": []
+        },
+        {
+          "name": "numRecords",
+          "value": "0"
+        },
+        {
+          "name": "state",
+          "value": "0"
+        }
+      ],
+      "behaviors": [
+        {
+          "name": "Tween",
+          "type": "Tween::TweenBehavior"
+        }
+      ],
+      "animations": [
+        {
+          "name": "1",
+          "useMultipleDirections": false,
+          "directions": [
+            {
+              "looping": false,
+              "timeBetweenFrames": 0.08,
+              "sprites": [
+                {
+                  "hasCustomCollisionMask": false,
+                  "image": "Part-1.png",
+                  "points": [],
+                  "originPoint": {
+                    "name": "origine",
+                    "x": 16,
+                    "y": 16
+                  },
+                  "centerPoint": {
+                    "automatic": true,
+                    "name": "centre",
+                    "x": 0,
+                    "y": 0
+                  },
+                  "customCollisionMask": []
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "bold": false,
+      "italic": false,
+      "name": "Instructions4",
+      "smoothed": true,
+      "tags": "",
+      "type": "TextObject::Text",
+      "underlined": false,
+      "variables": [],
+      "behaviors": [],
+      "string": "so I can pick them up.",
+      "font": "",
+      "characterSize": 30,
+      "color": {
+        "b": 255,
+        "g": 255,
+        "r": 255
+      }
+    },
+    {
+      "bold": false,
+      "italic": false,
+      "name": "Instructions5",
+      "smoothed": true,
+      "tags": "",
+      "type": "TextObject::Text",
+      "underlined": false,
+      "variables": [],
+      "behaviors": [],
+      "string": "(I can only hold one of these at a time.)",
+      "font": "",
+      "characterSize": 24,
+      "color": {
+        "b": 255,
+        "g": 255,
+        "r": 255
+      }
+    },
+    {
+      "name": "FixMeRug",
+      "tags": "",
+      "type": "Sprite",
+      "updateIfNotVisible": false,
+      "variables": [],
+      "behaviors": [],
+      "animations": [
+        {
+          "name": "",
+          "useMultipleDirections": false,
+          "directions": [
+            {
+              "looping": false,
+              "timeBetweenFrames": 0.08,
+              "sprites": [
+                {
+                  "hasCustomCollisionMask": false,
+                  "image": "Rug-1.png",
+                  "points": [],
+                  "originPoint": {
+                    "name": "origine",
+                    "x": 0,
+                    "y": 0
+                  },
+                  "centerPoint": {
+                    "automatic": true,
+                    "name": "centre",
+                    "x": 0,
+                    "y": 0
+                  },
+                  "customCollisionMask": []
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "bold": false,
+      "italic": false,
+      "name": "Instructions6",
+      "smoothed": true,
+      "tags": "",
+      "type": "TextObject::Text",
+      "underlined": false,
+      "variables": [],
+      "behaviors": [],
+      "string": "so I can insert",
+      "font": "",
+      "characterSize": 30,
+      "color": {
+        "b": 255,
+        "g": 255,
+        "r": 255
+      }
+    },
+    {
+      "bold": false,
+      "italic": false,
+      "name": "Instructions7",
+      "smoothed": true,
+      "tags": "",
+      "type": "TextObject::Text",
+      "underlined": false,
+      "variables": [],
+      "behaviors": [],
+      "string": "into my\ntime machine!",
+      "font": "",
+      "characterSize": 30,
+      "color": {
+        "b": 255,
+        "g": 255,
+        "r": 255
+      }
+    },
+    {
+      "bold": true,
+      "italic": false,
+      "name": "CreditsLabel",
+      "smoothed": true,
+      "tags": "",
+      "type": "TextObject::Text",
+      "underlined": false,
+      "variables": [],
+      "behaviors": [],
+      "string": "Credits:",
+      "font": "",
+      "characterSize": 34,
+      "color": {
+        "b": 255,
+        "g": 255,
+        "r": 255
+      }
+    },
+    {
+      "bold": false,
+      "italic": false,
+      "name": "Credits1",
+      "smoothed": true,
+      "tags": "",
+      "type": "TextObject::Text",
+      "underlined": false,
+      "variables": [],
+      "behaviors": [],
+      "string": "Game by Taro Omiya",
+      "font": "",
+      "characterSize": 24,
+      "color": {
+        "b": 255,
+        "g": 255,
+        "r": 255
+      }
+    },
+    {
+      "bold": false,
+      "italic": false,
+      "name": "Credits2",
+      "smoothed": true,
+      "tags": "",
+      "type": "TextObject::Text",
+      "underlined": false,
+      "variables": [],
+      "behaviors": [],
+      "string": "Music \"Perception\" by Bensound.com",
+      "font": "",
+      "characterSize": 24,
+      "color": {
+        "b": 255,
+        "g": 255,
+        "r": 255
+      }
+    },
+    {
+      "bold": false,
+      "italic": false,
+      "name": "Credits3",
+      "smoothed": true,
+      "tags": "",
+      "type": "TextObject::Text",
+      "underlined": false,
+      "variables": [],
+      "behaviors": [],
+      "string": "Licensed under Creative Commons, Attribution-NoDerivs 3.0",
+      "font": "",
+      "characterSize": 18,
+      "color": {
+        "b": 255,
+        "g": 255,
+        "r": 255
+      }
+    },
+    {
+      "bottomMargin": 2,
+      "height": 32,
+      "leftMargin": 2,
+      "name": "Button",
+      "rightMargin": 2,
+      "tags": "",
+      "texture": "Button-Default.png",
+      "tiled": true,
+      "topMargin": 2,
+      "type": "PanelSpriteObject::PanelSprite",
+      "width": 32,
+      "variables": [],
+      "behaviors": []
+    },
+    {
+      "bold": false,
+      "italic": false,
+      "name": "ButtonLabel",
+      "smoothed": true,
+      "tags": "",
+      "type": "TextObject::Text",
+      "underlined": false,
+      "variables": [],
+      "behaviors": [],
+      "string": "My Dissertation Awaits!",
+      "font": "",
+      "characterSize": 20,
+      "color": {
+        "b": 0,
+        "g": 0,
+        "r": 0
+      }
+    }
+  ],
+  "events": [
+    {
+      "disabled": false,
+      "folded": false,
+      "type": "BuiltinCommonInstructions::Standard",
+      "conditions": [
+        {
+          "type": {
+            "inverted": true,
+            "value": "Record::IsButtonHovered"
+          },
+          "parameters": [
+            "",
+            "Button",
+            ""
+          ],
+          "subInstructions": []
+        }
+      ],
+      "actions": [
+        {
+          "type": {
+            "inverted": false,
+            "value": "PanelSpriteObject::Image"
+          },
+          "parameters": [
+            "Button",
+            "\"Button-Default.png\"",
+            ""
+          ],
+          "subInstructions": []
+        }
+      ],
+      "events": []
+    },
+    {
+      "disabled": false,
+      "folded": false,
+      "type": "BuiltinCommonInstructions::Standard",
+      "conditions": [
+        {
+          "type": {
+            "inverted": false,
+            "value": "Record::IsButtonHovered"
+          },
+          "parameters": [
+            "",
+            "Button",
+            ""
+          ],
+          "subInstructions": []
+        }
+      ],
+      "actions": [
+        {
+          "type": {
+            "inverted": false,
+            "value": "PanelSpriteObject::Image"
+          },
+          "parameters": [
+            "Button",
+            "\"Button-Click.png\"",
+            ""
+          ],
+          "subInstructions": []
+        }
+      ],
+      "events": []
+    },
+    {
+      "disabled": false,
+      "folded": false,
+      "type": "BuiltinCommonInstructions::Comment",
+      "color": {
+        "b": 109,
+        "g": 230,
+        "r": 255,
+        "textB": 0,
+        "textG": 0,
+        "textR": 0
+      },
+      "comment": "When button is clicked",
+      "comment2": ""
+    },
+    {
+      "disabled": false,
+      "folded": false,
+      "type": "BuiltinCommonInstructions::Standard",
+      "conditions": [
+        {
+          "type": {
+            "inverted": false,
+            "value": "Record::IsButtonClicked"
+          },
+          "parameters": [
+            "",
+            "Button",
+            ""
+          ],
+          "subInstructions": []
+        }
+      ],
+      "actions": [
+        {
+          "type": {
+            "inverted": false,
+            "value": "Scene"
+          },
+          "parameters": [
+            "",
+            "\"Puzzle\"",
+            "yes"
+          ],
+          "subInstructions": []
+        }
+      ],
+      "events": []
+    }
+  ],
+  "layers": [
+    {
+      "name": "",
+      "visibility": true,
+      "cameras": [
+        {
+          "defaultSize": true,
+          "defaultViewport": true,
+          "height": 0,
+          "viewportBottom": 1,
+          "viewportLeft": 0,
+          "viewportRight": 1,
+          "viewportTop": 0,
+          "width": 0
+        }
+      ],
+      "effects": []
+    }
+  ],
+  "behaviorsSharedData": [
+    {
+      "name": "Tween",
+      "type": "Tween::TweenBehavior"
+    }
+  ]
+}

@@ -297,7 +297,7 @@
       "width": 154,
       "x": 1100,
       "y": 277,
-      "zOrder": 10,
+      "zOrder": 12,
       "numberProperties": [],
       "stringProperties": [],
       "initialVariables": []
@@ -306,13 +306,13 @@
       "angle": 0,
       "customSize": true,
       "height": 186,
-      "layer": "Background layer",
+      "layer": "",
       "locked": true,
       "name": "TimeMachine",
       "width": 284,
       "x": 1033,
       "y": 90,
-      "zOrder": 107,
+      "zOrder": 11,
       "numberProperties": [],
       "stringProperties": [],
       "initialVariables": []
@@ -1056,13 +1056,13 @@
       "variables": [],
       "behaviors": [
         {
+          "name": "Anchor",
+          "type": "AnchorBehavior::AnchorBehavior",
           "bottomEdgeAnchor": 2,
           "leftEdgeAnchor": 1,
-          "name": "Anchor",
           "relativeToOriginalWindowSize": true,
           "rightEdgeAnchor": 2,
-          "topEdgeAnchor": 1,
-          "type": "AnchorBehavior::AnchorBehavior"
+          "topEdgeAnchor": 1
         }
       ],
       "animations": [
@@ -1164,7 +1164,7 @@
       "underlined": false,
       "variables": [],
       "behaviors": [],
-      "string": "Time Reversal Machine",
+      "string": "time reversal machine",
       "font": "",
       "characterSize": 40,
       "color": {
@@ -1226,6 +1226,18 @@
         }
       ],
       "actions": [
+        {
+          "type": {
+            "inverted": false,
+            "value": "ModVarScene"
+          },
+          "parameters": [
+            "numParts",
+            "=",
+            "0"
+          ],
+          "subInstructions": []
+        },
         {
           "type": {
             "inverted": false,
@@ -1301,7 +1313,7 @@
         {
           "type": {
             "inverted": false,
-            "value": "Record::RecordPosition"
+            "value": "Record::ClearRecording"
           },
           "parameters": [
             "",
@@ -1313,12 +1325,12 @@
         {
           "type": {
             "inverted": false,
-            "value": "ModVarScene"
+            "value": "Record::RecordPosition"
           },
           "parameters": [
-            "numParts",
-            "=",
-            "0"
+            "",
+            "Player",
+            ""
           ],
           "subInstructions": []
         }
@@ -1331,6 +1343,18 @@
           "object": "Part",
           "conditions": [],
           "actions": [
+            {
+              "type": {
+                "inverted": false,
+                "value": "Record::ClearRecording"
+              },
+              "parameters": [
+                "",
+                "Part",
+                ""
+              ],
+              "subInstructions": []
+            },
             {
               "type": {
                 "inverted": false,
@@ -2431,6 +2455,23 @@
           },
           "stringParameters": {},
           "booleanParameters": {}
+        },
+        {
+          "effectType": "DropShadow",
+          "name": "Effect",
+          "doubleParameters": {
+            "alpha": 0.8,
+            "blur": 2,
+            "distance": 1,
+            "quality": 3,
+            "rotation": 45
+          },
+          "stringParameters": {
+            "color": "#2c2a3b"
+          },
+          "booleanParameters": {
+            "shadowOnly": false
+          }
         }
       ]
     },
