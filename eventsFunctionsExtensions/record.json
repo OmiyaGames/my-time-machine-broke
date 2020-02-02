@@ -9,44 +9,70 @@
   "version": "",
   "eventsFunctions": [
     {
-      "description": "Records a position",
-      "fullName": "Record Position",
-      "functionType": "Action",
-      "name": "Function",
-      "sentence": "Records the _PARAM1_'s position.",
+      "description": "Checks whether the object is ready to be recorded.",
+      "fullName": "Ready to Record?",
+      "functionType": "Condition",
+      "name": "ReadyToRecord",
+      "sentence": "When _PARAM1_ is ready to be recorded.",
       "events": [
         {
           "disabled": false,
           "folded": false,
           "type": "BuiltinCommonInstructions::Standard",
-          "conditions": [],
-          "actions": [],
+          "conditions": [
+            {
+              "type": {
+                "inverted": false,
+                "value": "ObjectTimer"
+              },
+              "parameters": [
+                "RecordObject",
+                "\"Record\"",
+                "2/60"
+              ],
+              "subInstructions": []
+            }
+          ],
+          "actions": [
+            {
+              "type": {
+                "inverted": false,
+                "value": "SetReturnBoolean"
+              },
+              "parameters": [
+                "True"
+              ],
+              "subInstructions": []
+            }
+          ],
           "events": []
         },
         {
           "disabled": false,
           "folded": false,
-          "type": "BuiltinCommonInstructions::JsCode",
-          "inlineCode": "objects.forEach(object => {\n  /** @type {gdjs.SpriteRuntimeObject} */\n  const record = object;\n});",
-          "parameterObjects": "Object",
-          "useStrict": true
-        },
-        {
-          "disabled": false,
-          "folded": false,
           "type": "BuiltinCommonInstructions::Standard",
-          "conditions": [],
+          "conditions": [
+            {
+              "type": {
+                "inverted": true,
+                "value": "ObjectTimer"
+              },
+              "parameters": [
+                "RecordObject",
+                "\"Record\"",
+                "2/60"
+              ],
+              "subInstructions": []
+            }
+          ],
           "actions": [
             {
               "type": {
                 "inverted": false,
-                "value": "ModVarObjet"
+                "value": "SetReturnBoolean"
               },
               "parameters": [
-                "Object",
-                "",
-                "",
-                ""
+                "False"
               ],
               "subInstructions": []
             }
@@ -60,7 +86,281 @@
           "defaultValue": "",
           "description": "",
           "longDescription": "",
-          "name": "Object",
+          "name": "RecordObject",
+          "optional": false,
+          "supplementaryInformation": "",
+          "type": "objectList"
+        }
+      ],
+      "objectGroups": []
+    },
+    {
+      "description": "Records the position of the object in pastXs and pastYs",
+      "fullName": "Record Position",
+      "functionType": "Action",
+      "name": "RecordPosition",
+      "sentence": "Record _PARAM1_'s position.",
+      "events": [
+        {
+          "disabled": false,
+          "folded": false,
+          "type": "BuiltinCommonInstructions::Standard",
+          "conditions": [],
+          "actions": [
+            {
+              "type": {
+                "inverted": false,
+                "value": "ModVarObjet"
+              },
+              "parameters": [
+                "RecordObject",
+                "pastXs[ToString(RecordObject.Variable(numRecords))]",
+                "=",
+                "RecordObject.X()"
+              ],
+              "subInstructions": []
+            },
+            {
+              "type": {
+                "inverted": false,
+                "value": "ModVarObjet"
+              },
+              "parameters": [
+                "RecordObject",
+                "pastYs[ToString(RecordObject.Variable(numRecords))]",
+                "=",
+                "RecordObject.Y()"
+              ],
+              "subInstructions": []
+            },
+            {
+              "type": {
+                "inverted": false,
+                "value": "ModVarObjet"
+              },
+              "parameters": [
+                "RecordObject",
+                "numRecords",
+                "+",
+                "1"
+              ],
+              "subInstructions": []
+            },
+            {
+              "type": {
+                "inverted": false,
+                "value": "ResetObjectTimer"
+              },
+              "parameters": [
+                "RecordObject",
+                "\"Record\""
+              ],
+              "subInstructions": []
+            }
+          ],
+          "events": []
+        }
+      ],
+      "parameters": [
+        {
+          "codeOnly": false,
+          "defaultValue": "",
+          "description": "",
+          "longDescription": "",
+          "name": "RecordObject",
+          "optional": false,
+          "supplementaryInformation": "",
+          "type": "objectList"
+        }
+      ],
+      "objectGroups": []
+    },
+    {
+      "description": "Checks whether object has a recorded position.",
+      "fullName": "Has a Record?",
+      "functionType": "Condition",
+      "name": "HasRecords",
+      "sentence": "When _PARAM1_ has a record.",
+      "events": [
+        {
+          "disabled": false,
+          "folded": false,
+          "type": "BuiltinCommonInstructions::Standard",
+          "conditions": [
+            {
+              "type": {
+                "inverted": false,
+                "value": "VarObjet"
+              },
+              "parameters": [
+                "RewindObject",
+                "numRecords",
+                ">",
+                "0"
+              ],
+              "subInstructions": []
+            }
+          ],
+          "actions": [
+            {
+              "type": {
+                "inverted": false,
+                "value": "SetReturnBoolean"
+              },
+              "parameters": [
+                "True"
+              ],
+              "subInstructions": []
+            }
+          ],
+          "events": []
+        },
+        {
+          "disabled": false,
+          "folded": false,
+          "type": "BuiltinCommonInstructions::Standard",
+          "conditions": [
+            {
+              "type": {
+                "inverted": false,
+                "value": "VarObjet"
+              },
+              "parameters": [
+                "RewindObject",
+                "numRecords",
+                "<=",
+                "0"
+              ],
+              "subInstructions": []
+            }
+          ],
+          "actions": [
+            {
+              "type": {
+                "inverted": false,
+                "value": "SetReturnBoolean"
+              },
+              "parameters": [
+                "False"
+              ],
+              "subInstructions": []
+            }
+          ],
+          "events": []
+        }
+      ],
+      "parameters": [
+        {
+          "codeOnly": false,
+          "defaultValue": "",
+          "description": "",
+          "longDescription": "",
+          "name": "RewindObject",
+          "optional": false,
+          "supplementaryInformation": "",
+          "type": "objectList"
+        }
+      ],
+      "objectGroups": []
+    },
+    {
+      "description": "",
+      "fullName": "Move to the last recorded Position",
+      "functionType": "Action",
+      "name": "MoveToLastRecord",
+      "sentence": "Move _PARAM1_ to the last recorded position.",
+      "events": [
+        {
+          "disabled": false,
+          "folded": false,
+          "type": "BuiltinCommonInstructions::Standard",
+          "conditions": [
+            {
+              "type": {
+                "inverted": false,
+                "value": "Record::HasRecords"
+              },
+              "parameters": [
+                "",
+                "RewindObject",
+                ""
+              ],
+              "subInstructions": []
+            }
+          ],
+          "actions": [
+            {
+              "type": {
+                "inverted": false,
+                "value": "ModVarObjet"
+              },
+              "parameters": [
+                "RewindObject",
+                "numRecords",
+                "-",
+                "1"
+              ],
+              "subInstructions": []
+            },
+            {
+              "type": {
+                "inverted": false,
+                "value": "MettreX"
+              },
+              "parameters": [
+                "RewindObject",
+                "=",
+                "RewindObject.Variable(pastXs[ToString(RewindObject.Variable(numRecords))])"
+              ],
+              "subInstructions": []
+            },
+            {
+              "type": {
+                "inverted": false,
+                "value": "MettreY"
+              },
+              "parameters": [
+                "RewindObject",
+                "=",
+                "RewindObject.Variable(pastYs[ToString(RewindObject.Variable(numRecords))])"
+              ],
+              "subInstructions": []
+            },
+            {
+              "type": {
+                "inverted": false,
+                "value": "ObjectVariableRemoveChild"
+              },
+              "parameters": [
+                "RewindObject",
+                "RewindObject.Variable(pastXs)",
+                "ToString(RewindObject.Variable(numRecords))"
+              ],
+              "subInstructions": []
+            },
+            {
+              "type": {
+                "inverted": false,
+                "value": "ObjectVariableRemoveChild"
+              },
+              "parameters": [
+                "RewindObject",
+                "RewindObject.Variable(pastYs)",
+                "ToString(RewindObject.Variable(numRecords))"
+              ],
+              "subInstructions": []
+            }
+          ],
+          "events": []
+        }
+      ],
+      "parameters": [
+        {
+          "codeOnly": false,
+          "defaultValue": "",
+          "description": "",
+          "longDescription": "",
+          "name": "RewindObject",
           "optional": false,
           "supplementaryInformation": "",
           "type": "objectList"

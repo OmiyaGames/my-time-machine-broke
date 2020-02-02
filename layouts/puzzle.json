@@ -405,11 +405,12 @@
         {
           "type": {
             "inverted": false,
-            "value": "ResetObjectTimer"
+            "value": "Record::RecordPosition"
           },
           "parameters": [
+            "",
             "Player",
-            "\"Record\""
+            ""
           ],
           "subInstructions": []
         }
@@ -732,11 +733,11 @@
             {
               "type": {
                 "inverted": false,
-                "value": "ObjectTimer"
+                "value": "Record::ReadyToRecord"
               },
               "parameters": [
                 "Player",
-                "\"Record\"",
+                "Player",
                 "2/60"
               ],
               "subInstructions": []
@@ -746,50 +747,12 @@
             {
               "type": {
                 "inverted": false,
-                "value": "ModVarObjet"
+                "value": "Record::RecordPosition"
               },
               "parameters": [
+                "",
                 "Player",
-                "pastXs[ToString(Player.VariableChildCount(pastXs))]",
-                "=",
-                "Player.PointX(\"Origin\")"
-              ],
-              "subInstructions": []
-            },
-            {
-              "type": {
-                "inverted": false,
-                "value": "ModVarObjet"
-              },
-              "parameters": [
-                "Player",
-                "pastYs[ToString(Player.VariableChildCount(pastYs))]",
-                "=",
-                "Player.PointY(\"Origin\")"
-              ],
-              "subInstructions": []
-            },
-            {
-              "type": {
-                "inverted": false,
-                "value": "ModVarObjet"
-              },
-              "parameters": [
-                "Player",
-                "numRecords",
-                "+",
-                "1"
-              ],
-              "subInstructions": []
-            },
-            {
-              "type": {
-                "inverted": false,
-                "value": "ResetObjectTimer"
-              },
-              "parameters": [
-                "Player",
-                "\"Record\""
+                ""
               ],
               "subInstructions": []
             }
@@ -919,81 +882,21 @@
           "subInstructions": []
         }
       ],
-      "actions": [],
-      "events": [
+      "actions": [
         {
-          "disabled": false,
-          "folded": false,
-          "type": "BuiltinCommonInstructions::Standard",
-          "conditions": [
-            {
-              "type": {
-                "inverted": false,
-                "value": "VarObjet"
-              },
-              "parameters": [
-                "Player",
-                "numRecords",
-                ">",
-                "0"
-              ],
-              "subInstructions": []
-            }
+          "type": {
+            "inverted": false,
+            "value": "Record::MoveToLastRecord"
+          },
+          "parameters": [
+            "",
+            "Player",
+            ""
           ],
-          "actions": [
-            {
-              "type": {
-                "inverted": false,
-                "value": "ModVarObjet"
-              },
-              "parameters": [
-                "Player",
-                "numRecords",
-                "-",
-                "1"
-              ],
-              "subInstructions": []
-            },
-            {
-              "type": {
-                "inverted": false,
-                "value": "MettreX"
-              },
-              "parameters": [
-                "Player",
-                "=",
-                "Player.Variable(pastXs[ToString(Player.Variable(numRecords))])"
-              ],
-              "subInstructions": []
-            },
-            {
-              "type": {
-                "inverted": false,
-                "value": "MettreY"
-              },
-              "parameters": [
-                "Player",
-                "=",
-                "Player.Variable(pastYs[ToString(Player.Variable(numRecords))])"
-              ],
-              "subInstructions": []
-            },
-            {
-              "type": {
-                "inverted": false,
-                "value": "ObjectVariableRemoveChild"
-              },
-              "parameters": [
-                "Player",
-                "pastXs",
-                "ToString(Player.Variable(numRecords))"
-              ],
-              "subInstructions": []
-            }
-          ],
-          "events": []
+          "subInstructions": []
         }
-      ]
+      ],
+      "events": []
     }
   ],
   "layers": [
