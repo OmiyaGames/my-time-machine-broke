@@ -22,9 +22,39 @@
     "gridWidth": 32,
     "snap": true,
     "windowMask": false,
-    "zoomFactor": 0.874
+    "zoomFactor": 0.586
   },
-  "objectsGroups": [],
+  "objectsGroups": [
+    {
+      "name": "Cutscene",
+      "objects": [
+        {
+          "name": "Button"
+        },
+        {
+          "name": "ButtonLabel"
+        },
+        {
+          "name": "Blank"
+        },
+        {
+          "name": "CutsceneLine1"
+        },
+        {
+          "name": "CutsceneLine2"
+        },
+        {
+          "name": "CutsceneLine3"
+        },
+        {
+          "name": "CutsceneLine4"
+        },
+        {
+          "name": "CutsceneLine5"
+        }
+      ]
+    }
+  ],
   "variables": [],
   "instances": [
     {
@@ -62,7 +92,7 @@
       "customSize": true,
       "height": 1476,
       "layer": "Background layer",
-      "locked": false,
+      "locked": true,
       "name": "Floor",
       "width": 2310,
       "x": 0,
@@ -106,13 +136,13 @@
       "angle": 0,
       "customSize": true,
       "height": 48,
-      "layer": "",
+      "layer": "GUI layer",
       "locked": false,
       "name": "Button",
       "width": 202,
-      "x": 237,
-      "y": 143,
-      "zOrder": 103,
+      "x": 296,
+      "y": 448,
+      "zOrder": 121,
       "numberProperties": [],
       "stringProperties": [],
       "initialVariables": [
@@ -141,8 +171,8 @@
       "angle": 0,
       "customSize": true,
       "height": 128,
-      "layer": "",
-      "locked": false,
+      "layer": "Background layer",
+      "locked": true,
       "name": "Wall",
       "width": 2310,
       "x": 0,
@@ -184,15 +214,15 @@
     },
     {
       "angle": 0,
-      "customSize": true,
+      "customSize": false,
       "height": 32,
       "layer": "",
       "locked": false,
       "name": "Part",
       "width": 32,
-      "x": 1120,
-      "y": 783,
-      "zOrder": 50,
+      "x": 893,
+      "y": 455,
+      "zOrder": 52,
       "numberProperties": [],
       "stringProperties": [],
       "initialVariables": []
@@ -205,8 +235,8 @@
       "locked": false,
       "name": "Part",
       "width": 0,
-      "x": 1305,
-      "y": 794,
+      "x": 794,
+      "y": 660,
       "zOrder": 51,
       "numberProperties": [],
       "stringProperties": [],
@@ -220,23 +250,8 @@
       "locked": false,
       "name": "PartSlot",
       "width": 0,
-      "x": 1034,
-      "y": 71,
-      "zOrder": 40,
-      "numberProperties": [],
-      "stringProperties": [],
-      "initialVariables": []
-    },
-    {
-      "angle": 0,
-      "customSize": false,
-      "height": 0,
-      "layer": "",
-      "locked": false,
-      "name": "PartSlot",
-      "width": 0,
       "x": 1101,
-      "y": 72,
+      "y": 203,
       "zOrder": 41,
       "numberProperties": [],
       "stringProperties": [],
@@ -249,15 +264,345 @@
     },
     {
       "angle": 0,
+      "customSize": false,
+      "height": 0,
+      "layer": "",
+      "locked": false,
+      "name": "PartSlot",
+      "width": 0,
+      "x": 1068,
+      "y": 252,
+      "zOrder": 40,
+      "numberProperties": [],
+      "stringProperties": [],
+      "initialVariables": [
+        {
+          "name": "slotNumber",
+          "value": "0"
+        }
+      ]
+    },
+    {
+      "angle": 0,
       "customSize": true,
       "height": 76,
       "layer": "Background layer",
       "locked": false,
       "name": "FixMeRug",
       "width": 154,
-      "x": 1016,
-      "y": 133,
+      "x": 1100,
+      "y": 277,
       "zOrder": 10,
+      "numberProperties": [],
+      "stringProperties": [],
+      "initialVariables": []
+    },
+    {
+      "angle": 0,
+      "customSize": true,
+      "height": 186,
+      "layer": "Background layer",
+      "locked": true,
+      "name": "TimeMachine",
+      "width": 284,
+      "x": 1033,
+      "y": 90,
+      "zOrder": 107,
+      "numberProperties": [],
+      "stringProperties": [],
+      "initialVariables": []
+    },
+    {
+      "angle": 0,
+      "customSize": false,
+      "height": 0,
+      "layer": "",
+      "locked": false,
+      "name": "PartSlot",
+      "width": 0,
+      "x": 1180,
+      "y": 203,
+      "zOrder": 43,
+      "numberProperties": [],
+      "stringProperties": [],
+      "initialVariables": [
+        {
+          "name": "slotNumber",
+          "value": "3"
+        }
+      ]
+    },
+    {
+      "angle": 0,
+      "customSize": false,
+      "height": 0,
+      "layer": "",
+      "locked": false,
+      "name": "PartSlot",
+      "width": 0,
+      "x": 1212,
+      "y": 252,
+      "zOrder": 44,
+      "numberProperties": [],
+      "stringProperties": [],
+      "initialVariables": [
+        {
+          "name": "slotNumber",
+          "value": "4"
+        }
+      ]
+    },
+    {
+      "angle": 0,
+      "customSize": false,
+      "height": 0,
+      "layer": "",
+      "locked": false,
+      "name": "PartSlot",
+      "width": 0,
+      "x": 1250,
+      "y": 203,
+      "zOrder": 45,
+      "numberProperties": [],
+      "stringProperties": [],
+      "initialVariables": [
+        {
+          "name": "slotNumber",
+          "value": "5"
+        }
+      ]
+    },
+    {
+      "angle": 0,
+      "customSize": false,
+      "height": 0,
+      "layer": "",
+      "locked": false,
+      "name": "PartSlot",
+      "width": 0,
+      "x": 1289,
+      "y": 252,
+      "zOrder": 46,
+      "numberProperties": [],
+      "stringProperties": [],
+      "initialVariables": [
+        {
+          "name": "slotNumber",
+          "value": "6"
+        }
+      ]
+    },
+    {
+      "angle": 0,
+      "customSize": false,
+      "height": 0,
+      "layer": "",
+      "locked": false,
+      "name": "PartSlot",
+      "width": 0,
+      "x": 1137,
+      "y": 252,
+      "zOrder": 42,
+      "numberProperties": [],
+      "stringProperties": [],
+      "initialVariables": [
+        {
+          "name": "slotNumber",
+          "value": "2"
+        }
+      ]
+    },
+    {
+      "angle": 0,
+      "customSize": false,
+      "height": 0,
+      "layer": "",
+      "locked": false,
+      "name": "Part",
+      "width": 0,
+      "x": 1009,
+      "y": 727,
+      "zOrder": 53,
+      "numberProperties": [],
+      "stringProperties": [],
+      "initialVariables": []
+    },
+    {
+      "angle": 0,
+      "customSize": false,
+      "height": 0,
+      "layer": "",
+      "locked": false,
+      "name": "Part",
+      "width": 0,
+      "x": 1111,
+      "y": 615,
+      "zOrder": 54,
+      "numberProperties": [],
+      "stringProperties": [],
+      "initialVariables": []
+    },
+    {
+      "angle": 0,
+      "customSize": false,
+      "height": 0,
+      "layer": "",
+      "locked": false,
+      "name": "Part",
+      "width": 0,
+      "x": 1301,
+      "y": 699,
+      "zOrder": 55,
+      "numberProperties": [],
+      "stringProperties": [],
+      "initialVariables": []
+    },
+    {
+      "angle": 0,
+      "customSize": false,
+      "height": 0,
+      "layer": "",
+      "locked": false,
+      "name": "Part",
+      "width": 0,
+      "x": 1367,
+      "y": 508,
+      "zOrder": 56,
+      "numberProperties": [],
+      "stringProperties": [],
+      "initialVariables": []
+    },
+    {
+      "angle": 0,
+      "customSize": false,
+      "height": 0,
+      "layer": "",
+      "locked": false,
+      "name": "Part",
+      "width": 0,
+      "x": 1547,
+      "y": 679,
+      "zOrder": 57,
+      "numberProperties": [],
+      "stringProperties": [],
+      "initialVariables": []
+    },
+    {
+      "angle": 0,
+      "customSize": true,
+      "height": 192,
+      "layer": "Collider layer",
+      "locked": false,
+      "name": "Blocker",
+      "width": 286,
+      "x": 1031,
+      "y": 84,
+      "zOrder": 118,
+      "numberProperties": [],
+      "stringProperties": [],
+      "initialVariables": []
+    },
+    {
+      "angle": 0,
+      "customSize": false,
+      "height": 0,
+      "layer": "GUI layer",
+      "locked": false,
+      "name": "ButtonLabel",
+      "width": 0,
+      "x": 333,
+      "y": 461,
+      "zOrder": 122,
+      "numberProperties": [],
+      "stringProperties": [],
+      "initialVariables": []
+    },
+    {
+      "angle": 0,
+      "customSize": true,
+      "height": 607,
+      "layer": "GUI layer",
+      "locked": false,
+      "name": "Blank",
+      "width": 805,
+      "x": -2,
+      "y": -5,
+      "zOrder": 120,
+      "numberProperties": [],
+      "stringProperties": [],
+      "initialVariables": []
+    },
+    {
+      "angle": 0,
+      "customSize": false,
+      "height": 0,
+      "layer": "GUI layer",
+      "locked": false,
+      "name": "CutsceneLine1",
+      "width": 0,
+      "x": 151,
+      "y": 76,
+      "zOrder": 124,
+      "numberProperties": [],
+      "stringProperties": [],
+      "initialVariables": []
+    },
+    {
+      "angle": 0,
+      "customSize": false,
+      "height": 0,
+      "layer": "GUI layer",
+      "locked": false,
+      "name": "CutsceneLine2",
+      "width": 0,
+      "x": 155,
+      "y": 129,
+      "zOrder": 125,
+      "numberProperties": [],
+      "stringProperties": [],
+      "initialVariables": []
+    },
+    {
+      "angle": 0,
+      "customSize": false,
+      "height": 0,
+      "layer": "GUI layer",
+      "locked": false,
+      "name": "CutsceneLine3",
+      "width": 0,
+      "x": 120,
+      "y": 241,
+      "zOrder": 126,
+      "numberProperties": [],
+      "stringProperties": [],
+      "initialVariables": []
+    },
+    {
+      "angle": 0,
+      "customSize": false,
+      "height": 0,
+      "layer": "GUI layer",
+      "locked": false,
+      "name": "CutsceneLine4",
+      "width": 0,
+      "x": 186,
+      "y": 296,
+      "zOrder": 127,
+      "numberProperties": [],
+      "stringProperties": [],
+      "initialVariables": []
+    },
+    {
+      "angle": 0,
+      "customSize": false,
+      "height": 0,
+      "layer": "GUI layer",
+      "locked": false,
+      "name": "CutsceneLine5",
+      "width": 0,
+      "x": 239,
+      "y": 351,
+      "zOrder": 128,
       "numberProperties": [],
       "stringProperties": [],
       "initialVariables": []
@@ -624,6 +969,293 @@
           ]
         }
       ]
+    },
+    {
+      "name": "TimeMachine",
+      "tags": "",
+      "type": "Sprite",
+      "updateIfNotVisible": false,
+      "variables": [],
+      "behaviors": [],
+      "animations": [
+        {
+          "name": "",
+          "useMultipleDirections": false,
+          "directions": [
+            {
+              "looping": false,
+              "timeBetweenFrames": 0.08,
+              "sprites": [
+                {
+                  "hasCustomCollisionMask": false,
+                  "image": "TimeMachine-1.png",
+                  "points": [],
+                  "originPoint": {
+                    "name": "origine",
+                    "x": 0,
+                    "y": 0
+                  },
+                  "centerPoint": {
+                    "automatic": true,
+                    "name": "centre",
+                    "x": 0,
+                    "y": 0
+                  },
+                  "customCollisionMask": []
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "bold": false,
+      "italic": false,
+      "name": "ButtonLabel",
+      "smoothed": true,
+      "tags": "",
+      "type": "TextObject::Text",
+      "underlined": false,
+      "variables": [],
+      "behaviors": [
+        {
+          "bottomEdgeAnchor": 2,
+          "leftEdgeAnchor": 1,
+          "name": "Anchor",
+          "relativeToOriginalWindowSize": true,
+          "rightEdgeAnchor": 2,
+          "topEdgeAnchor": 2,
+          "type": "AnchorBehavior::AnchorBehavior"
+        }
+      ],
+      "string": "Turning it On!",
+      "font": "",
+      "characterSize": 20,
+      "color": {
+        "b": 0,
+        "g": 0,
+        "r": 0
+      }
+    },
+    {
+      "bottomMargin": 1,
+      "height": 32,
+      "leftMargin": 1,
+      "name": "Button",
+      "rightMargin": 1,
+      "tags": "",
+      "texture": "Button-Default.png",
+      "tiled": false,
+      "topMargin": 1,
+      "type": "PanelSpriteObject::PanelSprite",
+      "width": 32,
+      "variables": [],
+      "behaviors": [
+        {
+          "bottomEdgeAnchor": 2,
+          "leftEdgeAnchor": 1,
+          "name": "Anchor",
+          "relativeToOriginalWindowSize": true,
+          "rightEdgeAnchor": 2,
+          "topEdgeAnchor": 2,
+          "type": "AnchorBehavior::AnchorBehavior"
+        }
+      ]
+    },
+    {
+      "name": "Blank",
+      "tags": "",
+      "type": "Sprite",
+      "updateIfNotVisible": false,
+      "variables": [],
+      "behaviors": [
+        {
+          "bottomEdgeAnchor": 2,
+          "leftEdgeAnchor": 1,
+          "name": "Anchor",
+          "relativeToOriginalWindowSize": true,
+          "rightEdgeAnchor": 2,
+          "topEdgeAnchor": 1,
+          "type": "AnchorBehavior::AnchorBehavior"
+        }
+      ],
+      "animations": [
+        {
+          "name": "NewObject",
+          "useMultipleDirections": false,
+          "directions": [
+            {
+              "looping": false,
+              "timeBetweenFrames": 0.08,
+              "sprites": [
+                {
+                  "hasCustomCollisionMask": false,
+                  "image": "Blank-1.png",
+                  "points": [],
+                  "originPoint": {
+                    "name": "origine",
+                    "x": 0,
+                    "y": 0
+                  },
+                  "centerPoint": {
+                    "automatic": true,
+                    "name": "centre",
+                    "x": 0,
+                    "y": 0
+                  },
+                  "customCollisionMask": []
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "bold": false,
+      "italic": false,
+      "name": "CutsceneLine1",
+      "smoothed": true,
+      "tags": "",
+      "type": "TextObject::Text",
+      "underlined": false,
+      "variables": [],
+      "behaviors": [
+        {
+          "bottomEdgeAnchor": 1,
+          "leftEdgeAnchor": 1,
+          "name": "Anchor",
+          "relativeToOriginalWindowSize": true,
+          "rightEdgeAnchor": 2,
+          "topEdgeAnchor": 1,
+          "type": "AnchorBehavior::AnchorBehavior"
+        }
+      ],
+      "string": "...that goes here, and done!",
+      "font": "",
+      "characterSize": 40,
+      "color": {
+        "b": 255,
+        "g": 255,
+        "r": 255
+      }
+    },
+    {
+      "bold": false,
+      "italic": false,
+      "name": "CutsceneLine2",
+      "smoothed": true,
+      "tags": "",
+      "type": "TextObject::Text",
+      "underlined": false,
+      "variables": [],
+      "behaviors": [
+        {
+          "bottomEdgeAnchor": 1,
+          "leftEdgeAnchor": 1,
+          "name": "Anchor",
+          "relativeToOriginalWindowSize": true,
+          "rightEdgeAnchor": 2,
+          "topEdgeAnchor": 1,
+          "type": "AnchorBehavior::AnchorBehavior"
+        }
+      ],
+      "string": "I think that fixes everything!",
+      "font": "",
+      "characterSize": 40,
+      "color": {
+        "b": 255,
+        "g": 255,
+        "r": 255
+      }
+    },
+    {
+      "bold": false,
+      "italic": false,
+      "name": "CutsceneLine3",
+      "smoothed": true,
+      "tags": "",
+      "type": "TextObject::Text",
+      "underlined": false,
+      "variables": [],
+      "behaviors": [
+        {
+          "bottomEdgeAnchor": 1,
+          "leftEdgeAnchor": 1,
+          "name": "Anchor",
+          "relativeToOriginalWindowSize": true,
+          "rightEdgeAnchor": 2,
+          "topEdgeAnchor": 1,
+          "type": "AnchorBehavior::AnchorBehavior"
+        }
+      ],
+      "string": "And the only way to be sure this",
+      "font": "",
+      "characterSize": 40,
+      "color": {
+        "b": 255,
+        "g": 255,
+        "r": 255
+      }
+    },
+    {
+      "bold": false,
+      "italic": false,
+      "name": "CutsceneLine4",
+      "smoothed": true,
+      "tags": "",
+      "type": "TextObject::Text",
+      "underlined": false,
+      "variables": [],
+      "behaviors": [
+        {
+          "bottomEdgeAnchor": 1,
+          "leftEdgeAnchor": 1,
+          "name": "Anchor",
+          "relativeToOriginalWindowSize": true,
+          "rightEdgeAnchor": 2,
+          "topEdgeAnchor": 1,
+          "type": "AnchorBehavior::AnchorBehavior"
+        }
+      ],
+      "string": "Time Reversal Machine",
+      "font": "",
+      "characterSize": 40,
+      "color": {
+        "b": 255,
+        "g": 255,
+        "r": 255
+      }
+    },
+    {
+      "bold": false,
+      "italic": false,
+      "name": "CutsceneLine5",
+      "smoothed": true,
+      "tags": "",
+      "type": "TextObject::Text",
+      "underlined": false,
+      "variables": [],
+      "behaviors": [
+        {
+          "bottomEdgeAnchor": 1,
+          "leftEdgeAnchor": 1,
+          "name": "Anchor",
+          "relativeToOriginalWindowSize": true,
+          "rightEdgeAnchor": 2,
+          "topEdgeAnchor": 1,
+          "type": "AnchorBehavior::AnchorBehavior"
+        }
+      ],
+      "string": "is working, is by...",
+      "font": "",
+      "characterSize": 40,
+      "color": {
+        "b": 255,
+        "g": 255,
+        "r": 255
+      }
     }
   ],
   "events": [
@@ -662,12 +1294,10 @@
         {
           "type": {
             "inverted": false,
-            "value": "Opacity"
+            "value": "Cache"
           },
           "parameters": [
-            "Pointer",
-            "=",
-            "0"
+            "Pointer"
           ],
           "subInstructions": []
         },
@@ -730,18 +1360,6 @@
             "",
             "\"Background layer\"",
             ""
-          ],
-          "subInstructions": []
-        },
-        {
-          "type": {
-            "inverted": false,
-            "value": "Opacity"
-          },
-          "parameters": [
-            "Blocker",
-            "=",
-            "0"
           ],
           "subInstructions": []
         },
@@ -896,7 +1514,7 @@
           "colorR": 74,
           "creationTime": 0,
           "disabled": false,
-          "folded": true,
+          "folded": false,
           "name": "Mouse Behavior",
           "source": "",
           "type": "BuiltinCommonInstructions::Group",
@@ -949,12 +1567,11 @@
                 {
                   "type": {
                     "inverted": false,
-                    "value": "Opacity"
+                    "value": "Montre"
                   },
                   "parameters": [
                     "Pointer",
-                    "=",
-                    "255"
+                    "="
                   ],
                   "subInstructions": []
                 }
@@ -970,7 +1587,7 @@
           "colorR": 74,
           "creationTime": 0,
           "disabled": false,
-          "folded": true,
+          "folded": false,
           "name": "Pointer Behavior",
           "source": "",
           "type": "BuiltinCommonInstructions::Group",
@@ -998,12 +1615,10 @@
                 {
                   "type": {
                     "inverted": false,
-                    "value": "Opacity"
+                    "value": "Visible"
                   },
                   "parameters": [
-                    "Pointer",
-                    ">",
-                    "0"
+                    "Pointer"
                   ],
                   "subInstructions": []
                 }
@@ -1076,12 +1691,10 @@
                 {
                   "type": {
                     "inverted": false,
-                    "value": "Opacity"
+                    "value": "Cache"
                   },
                   "parameters": [
-                    "Pointer",
-                    "=",
-                    "0"
+                    "Pointer"
                   ],
                   "subInstructions": []
                 }
@@ -1282,22 +1895,9 @@
                   },
                   "parameters": [
                     "Player",
-                    "isCarryingPart",
-                    "=",
-                    "0"
-                  ],
-                  "subInstructions": []
-                },
-                {
-                  "type": {
-                    "inverted": false,
-                    "value": "ModVarObjet"
-                  },
-                  "parameters": [
-                    "Part",
-                    "state",
-                    "=",
-                    "2"
+                    "numPartsCollected",
+                    "+",
+                    "1"
                   ],
                   "subInstructions": []
                 },
@@ -1322,9 +1922,22 @@
                   },
                   "parameters": [
                     "Player",
-                    "numPartsCollected",
-                    "+",
-                    "1"
+                    "isCarryingPart",
+                    "=",
+                    "0"
+                  ],
+                  "subInstructions": []
+                },
+                {
+                  "type": {
+                    "inverted": false,
+                    "value": "ModVarObjet"
+                  },
+                  "parameters": [
+                    "Part",
+                    "state",
+                    "=",
+                    "2"
                   ],
                   "subInstructions": []
                 }
@@ -1632,9 +2245,19 @@
       "visibility": false,
       "cameras": [],
       "effects": []
+    },
+    {
+      "name": "GUI layer",
+      "visibility": false,
+      "cameras": [],
+      "effects": []
     }
   ],
   "behaviorsSharedData": [
+    {
+      "name": "Anchor",
+      "type": "AnchorBehavior::AnchorBehavior"
+    },
     {
       "name": "Tween",
       "type": "Tween::TweenBehavior"
